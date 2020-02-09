@@ -19,7 +19,7 @@ import {
 } from '../store/app.store';
 
 export default {
-  name: 'HelloWorld',
+  name: 'Users',
   props: {
   },
   computed: {
