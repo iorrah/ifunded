@@ -1,12 +1,27 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../assets/SourceSansPro/SourceSansPro-SemiBoldItalic.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-Black.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-BlackItalic.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-Bold.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-BoldItalic.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-ExtraLight.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-ExtraLightItalic.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-Italic.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-Light.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-LightItalic.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-Regular.ttf')
+  url('../assets/SourceSansPro/SourceSansPro-SemiBold.ttf');
+}
+
 body {
+  font-family: $font;
   margin: 0;
   padding: 0;
   font-size: 12px;
 }
 
 #app {
-  font-family: $font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
