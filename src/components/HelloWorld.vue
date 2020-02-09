@@ -3,7 +3,7 @@
     <h3>Users</h3>
 
     <table class="table">
-      <tr v-for="user in appUsers" v-bind:key="user.email">
+      <tr v-for="user in appUsers" v-bind:key="user.id">
         <td>{{ user.first_name }}</td>
         <td>{{ user.last_name }}</td>
         <td>{{ user.email }}</td>
