@@ -1,7 +1,14 @@
 <template>
   <div class="users">
     <h3>Users</h3>
-    <button type="button" @click="getUsers()">Load users</button>
+
+    <table class="table">
+      <tr v-for="user in appUsers" v-bind:key="user.email">
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -37,17 +44,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h3 {
-  margin: 40px 0 0;
+  margin: 40px 0 20px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+table {
+  margin: 0 auto;
 }
 </style>
