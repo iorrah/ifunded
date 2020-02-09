@@ -1,11 +1,12 @@
 <template>
   <div id="app">
+    <Navbar />
     <Users />
   </div>
 </template>
 
 <script>
-import Users from './components/Users.vue';
+import Users from './components/Users/index';
 
 export default {
   name: 'App',

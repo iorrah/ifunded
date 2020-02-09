@@ -16,7 +16,9 @@
 import {
   ACTION_APP_GET_USERS,
   ACTION_APP_ADD_USER,
-} from '../store/app.store';
+} from '../../store/app.store';
+
+import './style.scss';
 
 export default {
   name: 'Users',
@@ -43,10 +45,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 20px;
-}
-table {
-  margin: 0 auto;
-}
+
 </style>
