@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import app from './app.store';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
   },
   mutations: {
@@ -11,5 +12,8 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
+    app,
   },
 });
+
+export default store;
