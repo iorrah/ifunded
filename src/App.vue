@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import './styles/styles.scss';
 import Users from './components/Users/index';
 
 export default {

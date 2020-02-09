@@ -1,0 +1,630 @@
+.material-form {
+  position: relative
+}
+
+.material-form .group {
+  position: relative;
+  margin: 10px 0 15px;
+  text-align: left
+}
+
+.material-form .group.inline-with-select {
+  margin-top: 22px
+}
+
+.material-form .group input::placeholder {
+  opacity: 0.5 !important
+}
+
+.material-form .ui-slider-range {
+  background: #3abfbf
+}
+
+.material-form input.amount {
+  border: none !important
+}
+
+.material-form .ui-widget.ui-widget-content {
+  border: none;
+  background: #eee
+}
+
+.material-form .switch-container {
+  text-align: center
+}
+
+.material-form .switch-container .switch-title {
+  display: inline-block;
+  width: 100px;
+  vertical-align: middle
+}
+
+.material-form .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align: middle
+}
+
+.material-form .switch input {
+  display: none
+}
+
+.material-form .switch .switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s
+}
+
+.material-form .switch .switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s
+}
+
+.material-form input:checked+.switch-slider {
+  background-color: #3abfbf
+}
+
+.material-form input:focus+.switch-slider {
+  box-shadow: 0 0 1px #3abfbf
+}
+
+.material-form input:checked+.switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px)
+}
+
+.material-form .switch-slider.round {
+  border-radius: 34px
+}
+
+.material-form .switch-slider.round:before {
+  border-radius: 50%
+}
+
+.material-form .slider-range {
+  height: 5px;
+  margin-bottom: 35px
+}
+
+.material-form .ui-slider-handle {
+  border: none;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: -14px
+}
+
+.material-form .ui-slider-handle.ui-state-active {
+  background: #3abfbf
+}
+
+.material-form .ui-slider-handle.ui-state-focus {
+  outline: none
+}
+
+.material-form .multiple-checkbox .checkbox-item {
+  display: block;
+  min-height: 30px
+}
+
+.material-form .multiple-checkbox .checkbox-item .jq-checkbox {
+  margin: 10px 0 0 0
+}
+
+.material-form .multiple-checkbox .checkbox-item .checkbox-label {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: middle
+}
+
+.material-form .multiple-checkbox .checkbox-item .sub-multiple-checkbox {
+  padding-left: 20px
+}
+
+.material-form .radio-group .radio-item {
+  margin-bottom: 10px
+}
+
+.material-form .radio-group .radio-item .jq-radio {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle
+}
+
+.material-form .radio-group .radio-item .jq-radio.checked {
+  background: #3abfbf;
+  border-color: #3abfbf
+}
+
+.material-form .radio-group .radio-item .radio-label {
+  display: inline-block;
+  padding-left: 5px;
+  vertical-align: middle
+}
+
+.material-form .radio-button-group {
+  margin-bottom: 10px
+}
+
+.material-form .radio-button-group>p:first-child {
+  margin-top: 0
+}
+
+.material-form .radio-button-group label {
+  padding: 5px 15px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  position: relative !important;
+  pointer-events: all !important;
+  display: inline-block !important;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  color: #62697f !important;
+  text-align: center;
+  font-size: 16px !important;
+  margin-right: 10px
+}
+
+.material-form .radio-button-group label:last-child {
+  margin-right: 0
+}
+
+.material-form .radio-button-group input {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1
+}
+
+.material-form .radio-button-group input:checked+label {
+  border: 2px solid #3abfbf;
+  box-shadow: none
+}
+
+.material-form .select-group:hover label {
+  color: #3abfbf
+}
+
+.material-form .uppercase-label label {
+  text-transform: uppercase
+}
+
+.material-form .button-group-center {
+  text-align: center
+}
+
+.material-form .button-group-right {
+  text-align: right
+}
+
+.material-form input:not([type='submit']):not(.switch-input) {
+  font-size: 18px;
+  padding: 10px 10px 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #d8dfe4
+}
+
+.material-form .intl-tel-input input#phone {
+  padding-left: 50px
+}
+
+.material-form .intl-tel-input .country-list {
+  color: #62697f
+}
+
+.material-form input[type='text'],
+.material-form input[type='email'] {
+  background: transparent;
+  color: #62697f
+}
+
+.material-form input:focus {
+  outline: none
+}
+
+.material-form .fgtPass {
+  color: #3abfbf;
+  font-size: 14px;
+  position: absolute;
+  top: 13px;
+  right: 0
+}
+
+.material-form .error-message {
+  color: #f3173a;
+  text-align: left;
+  margin-top: 8px;
+  display: none
+}
+
+.material-form .invalid~label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  top: -8px;
+  font-size: 14px;
+  color: #f3173a
+}
+
+.material-form .intl-tel-input.invalid~label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  top: 4px
+}
+
+.material-form .invalid~.error-message {
+  display: none;
+  color: #f3173a
+}
+
+.material-form .question-error-message,
+.material-form .subquestion-error-message {
+  color: #f3173a;
+  margin-top: 8px;
+  padding: 10px 15px;
+  background: #fee;
+  border-radius: 2px;
+  display: none
+}
+
+.remember-me {
+  display: block;
+  margin-bottom: 20px
+}
+
+.material-form .checkbox-label {
+  display: block
+}
+
+.projectpageModule p {
+  font-size: 16px
+}
+
+.material-form span.helper {
+  display: block;
+  margin-bottom: 25px;
+  font-style: italic
+}
+
+.material-form textarea {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #d8dfe4;
+  border-width: 0 0 2px 0;
+  resize: none;
+  height: 50px;
+  margin: 25px 0 0;
+  padding: 0;
+  color: #62697f;
+  font-size: 18px;
+  line-height: 1.2
+}
+
+.material-form label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  color: #62697f;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all
+}
+
+.material-form .intl-tel-input~label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  top: 4px
+}
+
+.material-form .input-radio-group label {
+  position: relative !important;
+  pointer-events: all
+}
+
+.material-form label.acceptance-disclaimer {
+  position: relative;
+  display: block;
+  float: none;
+  margin-left: 40px
+}
+
+.material-form .group-checkbox {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px
+}
+
+.material-form .group-checkbox input {
+  float: left
+}
+
+.material-form .group-checkbox label {
+  margin-left: 30px;
+  text-align: left
+}
+
+.material-form .external-label label {
+  display: block;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 0
+}
+
+.material-form input:focus~label,
+.material-form input:valid:not(.invalid)~label,
+.material-form .filled:not(.invalid):not(.jq-radio)~label,
+.material-form input:disabled~label,
+.material-form input[readonly="readonly"]~label {
+  top: -8px !important;
+  font-size: 14px !important;
+  color: #3abfbf !important
+}
+
+.material-form .intl-tel-input.filled:not(.invalid)~label {
+  top: 4px !important
+}
+
+.material-form textarea:focus~label,
+.material-form textarea:valid~label,
+.material-form textarea:disabled~label,
+.material-form textarea[readonly="readonly"]~label {
+  top: -20px !important;
+  font-size: 14px !important;
+  color: #3abfbf !important
+}
+
+.material-form input:disabled,
+.material-form input:disabled~label {
+  opacity: 0.6 !important
+}
+
+.material-form .select-group div.jq-selectbox {
+  text-align: left;
+  border-bottom: 2px solid #d8dfe4;
+  display: block !important
+}
+
+.material-form .select-group input:focus,
+.material-form .select-group div.jq-selectbox.focused {
+  border-color: #3abfbf
+}
+
+.material-form .select-group {
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  min-height: 45px
+}
+
+.material-form .select-group select {
+  cursor: pointer;
+  line-height: 32px;
+  margin-top: 8px
+}
+
+.material-form .visible-only-if-required {
+  visibility: hidden;
+  opacity: 0;
+  transform: all 100ms ease-in-out
+}
+
+.material-form .visible-only-if-required:required {
+  visibility: visible;
+  opacity: 1;
+  transform: all 100ms ease-in-out
+}
+
+.material-form .select-group label {
+  position: absolute;
+  font-size: 14px !important
+}
+
+.material-form .select-group div.jq-selectbox:hover {
+  border-color: #3abfbf;
+  color: #3abfbf
+}
+
+.investmentTypeBond .material-form .select-group div.jq-selectbox:hover {
+  border-color: #228dc8;
+  color: #228dc8
+}
+
+.material-form .select-group .jq-selectbox__select-text {
+  font-size: 18px;
+  color: #62697f;
+  padding-left: 0
+}
+
+.material-form .select-group .jq-selectbox__dropdown {
+  color: #62697f
+}
+
+.material-form .file-group {
+  display: block;
+  text-align: left
+}
+
+.material-form .file-group .jq-file {
+  display: block !important
+}
+
+.material-form .file-group label {
+  position: absolute;
+  margin-top: -20px;
+  font-size: 14px
+}
+
+.material-form .file-group .jq-file__name {
+  line-height: 40px;
+  border-bottom: 2px solid #d8dfe4;
+  display: block !important
+}
+
+.material-form .jq-checkbox {
+  float: left;
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+  margin-top: 3px
+}
+
+.material-form.dark-material-form input::placeholder {
+  color: #fff;
+  opacity: 0.4 !important
+}
+
+.material-form.dark-material-form input,
+.material-form.dark-material-form input[type='text'],
+.material-form.dark-material-form input[type='email'],
+.material-form.dark-material-form label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  color: #f0f3f4
+}
+
+.material-form.dark-material-form .primary-button,
+.material-form.dark-material-form .featured-project-component.featured-loan .cta-button,
+.featured-project-component.featured-loan .material-form.dark-material-form .cta-button {
+  background: none;
+  border-color: #3abfbf;
+  color: #3abfbf
+}
+
+.material-form.dark-material-form .primary-button:hover,
+.material-form.dark-material-form .featured-project-component.featured-loan .cta-button:hover,
+.featured-project-component.featured-loan .material-form.dark-material-form .cta-button:hover {
+  color: #fff;
+  background: #3abfbf;
+  border-color: #3abfbf
+}
+
+.material-form.dark-material-form input:focus~label:not(.checkbox-label):not(.switch):not(.radio-label),
+.material-form.dark-material-form input:valid~label:not(.checkbox-label):not(.switch):not(.radio-label),
+.material-form.dark-material-form .filled:not(.invalid)~label:not(.checkbox-label):not(.switch):not(.radio-label),
+.material-form.dark-material-form input.filled:not(.invalid)~label:not(.checkbox-label):not(.switch):not(.radio-label),
+.material-form.dark-material-form input:disabled~label:not(.checkbox-label):not(.switch):not(.radio-label),
+.material-form.dark-material-form input[readonly="readonly"]~label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  top: -8px;
+  font-size: 14px;
+  color: #3abfbf
+}
+
+.material-form.dark-material-form .intl-tel-input.filled:not(.invalid)~label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  top: 10px
+}
+
+.material-form.dark-material-form .invalid~label:not(.checkbox-label):not(.switch):not(.radio-label) {
+  color: #fd7b7e
+}
+
+.material-form.darkmaterial-form .intl-tel-input {
+  color: #f0f3f4
+}
+
+.material-form .bar {
+  position: relative;
+  display: block;
+  width: 100%
+}
+
+.material-form .bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #3abfbf;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all
+}
+
+.material-form .bar:before {
+  left: 50%
+}
+
+.material-form .bar:after {
+  right: 50%
+}
+
+.material-form input:focus~.bar:before,
+.material-form input:focus~.bar:after,
+.material-form textarea:focus~.bar:before,
+.material-form textarea:focus~.bar:after {
+  width: 50%
+}
+
+.material-form .base-button,
+.material-form .featured-project-component.featured-bond .cta-button {
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: all 100ms ease-in;
+  border-style: solid;
+  border-width: 2px;
+  width: auto;
+  display: inline-block
+}
+
+.material-form .primary-button,
+.material-form .featured-project-component.featured-loan .cta-button {
+  border-color: #3abfbf;
+  margin-top: 5px
+}
+
+.material-form .primary-button:hover,
+.material-form .featured-project-component.featured-loan .cta-button:hover {
+  border-color: #2ea6a9
+}
+
+.material-form .bonds-primary-button,
+.material-form .featured-project-component.featured-bond .cta-button {
+  border-color: #228dc8;
+  margin-top: 5px
+}
+
+.material-form .bonds-primary-button:hover,
+.material-form .featured-project-component.featured-bond .cta-button:hover  {
+  border-color: #1e7eb2
+}
+
+.material-form select {
+  display: inline-block;
+  min-height: 40px
+}
+
+.material-form .remember-me {
+  position: relative !important;
+  pointer-events: all !important
+}
+
+.material-form .remember-me .jq-checkbox {
+  float: none;
+  margin-right: 5px;
+  width: 24px;
+  height: 24px
+}
+
+.material-form .remember-me .checkbox-label {
+  font-size: 16px
+}
