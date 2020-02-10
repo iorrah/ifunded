@@ -42,15 +42,17 @@
 }
 
 .users__table-cell--name {
-  width: 30%
+  width: 30%;
+  cursor: pointer;
 }
 
 .users__table-cell--email {
-  width: 60%
+  width: 60%;
+  cursor: pointer;
 }
 
 .users__table-cell--action {
-  width: 10%
+  width: 10%;
 }
 
 .users__table-header-arrow {

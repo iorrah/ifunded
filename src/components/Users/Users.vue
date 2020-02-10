@@ -17,7 +17,7 @@
     <table class="users__table">
       <thead class="users__table-header">
         <tr>
-          <th class="users__table-cell users__table-cell--name">
+          <th class="users__table-cell users__table-cell--name" @click="sortUsers('first_name')">
             Name
 
             <img
@@ -26,7 +26,7 @@
             />
           </th>
 
-          <th class="users__table-cell users__table-cell--email">
+          <th class="users__table-cell users__table-cell--email" @click="sortUsers('email')">
             Email
 
             <img
@@ -89,12 +89,50 @@ export default {
       return this.$store.getters.getUsers;
     },
   },
+  data() {
+    return {
+      sort: 'asc',
+    };
+  },
   methods: {
     getUsers() {
       this.$store.dispatch(ACTION_APP_GET_USERS);
     },
     addUser() {
       this.$store.dispatch(ACTION_APP_ADD_USER);
+    },
+    sortUsers(prop) {
+      const sortAsc = (a, b) => {
+        if (a[prop] < b[prop]) {
+          return -1;
+        }
+
+        if (a[prop] > b[prop]) {
+          return 1;
+        }
+
+        return 0;
+      };
+
+      const sortDesc = (a, b) => {
+        if (a[prop] > b[prop]) {
+          return -1;
+        }
+
+        if (a[prop] < b[prop]) {
+          return 1;
+        }
+
+        return 0;
+      };
+
+      if (this.sort === 'asc') {
+        this.sort = 'desc';
+        return this.appUsers.sort(sortAsc);
+      }
+
+      this.sort = 'asc';
+      return this.appUsers.sort(sortDesc);
     },
   },
   mounted() {
