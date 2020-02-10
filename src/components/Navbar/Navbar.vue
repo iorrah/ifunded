@@ -102,7 +102,7 @@
         </div>
 
         <a href="#" class="navbar__profile">
-          <span class="navbar__salutation">Hello, Anne</span>
+          <span class="navbar__salutation">Janet Weaver</span>
           <img src="../../assets/user-avatar.png" class="navbar__avatar">
         </a>
       </div>
