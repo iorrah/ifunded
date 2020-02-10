@@ -84,13 +84,24 @@
         <div class="material-form__input-select filters__input-select">
           <div class="group select-group">
             <div class="jq-selectbox jqselect inpField dropup opened">
-              <select required="required" class="inpField inpField__select">
-                <option label="All dates" selected="selected"></option>
-                <option label="February"></option>
-                <option label="January"></option>
-                <option label="December"></option>
-                <option label="November"></option>
-                <option label="October"></option>
+              <select
+                required="required"
+                class="inpField inpField__select"
+                @change="updateMonth($event)"
+              >
+                <option label="" selected="selected">Anytime</option>
+                <option value="12" label="December"></option>
+                <option value="11" label="November"></option>
+                <option value="10" label="October"></option>
+                <option value="9" label="September"></option>
+                <option value="8" label="August"></option>
+                <option value="7" label="July"></option>
+                <option value="6" label="June"></option>
+                <option value="5" label="May"></option>
+                <option value="4" label="April"></option>
+                <option value="3" label="March"></option>
+                <option value="2" label="February"></option>
+                <option value="1" label="January"></option>
               </select>
 
               <div class="jq-selectbox__select">
@@ -121,7 +132,7 @@
 <script>
 export default {
   name: 'Filters',
-  props: ['search', 'appUsers', 'creatorId'],
+  props: ['search', 'appUsers', 'creatorId', 'month'],
   computed: {
     creators() {
       const creatorsIds = this.appUsers.map((e) => e.creator_id);
@@ -142,6 +153,9 @@ export default {
     },
     updateCreator(e) {
       this.$emit('update:creatorId', parseInt(e.target.value, 10));
+    },
+    updateMonth(e) {
+      this.$emit('update:month', parseInt(e.target.value, 10));
     },
   },
 };

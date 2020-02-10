@@ -1,6 +1,11 @@
 <template>
   <div class="users container" v-if="appUsers.length > 0">
-    <Filters :search.sync="search" :creatorId.sync="creatorId" :appUsers="appUsers" />
+    <Filters
+      :search.sync="search"
+      :creatorId.sync="creatorId"
+      :month.sync="month"
+      :appUsers="appUsers"
+    />
 
     <div class="users__header flex__space-between">
       <h3 class="users__title">
@@ -112,6 +117,10 @@ export default {
         users = this.getFilteredByCreator(users, this.creatorId);
       }
 
+      if (this.month !== null && this.month > 0) {
+        users = this.getFilteredByMonth(users, this.month);
+      }
+
       return users;
     },
   },
@@ -120,6 +129,7 @@ export default {
       sort: 'asc',
       search: '',
       creatorId: null,
+      month: null,
     };
   },
   methods: {
@@ -146,6 +156,12 @@ export default {
     },
     getFilteredByCreator(users, creatorId) {
       return users.filter((user) => user.creator_id === creatorId, 10);
+    },
+    getFilteredByMonth(users, month) {
+      return users.filter((user) => {
+        const creationMonth = new Date(user.created_date).getMonth() + 1;
+        return creationMonth === month;
+      });
     },
   },
   mounted() {
