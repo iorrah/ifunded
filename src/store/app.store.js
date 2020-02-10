@@ -8,7 +8,7 @@ const ADD_USER_VALUE = 'AddUserValue';
 
 // eslint-disable-next-line no-unused-vars
 const state = {
-  users: null,
+  users: [],
 };
 
 // eslint-disable-next-line no-unused-vars
