@@ -11,7 +11,7 @@
       <h3 class="users__title">
         Users
 
-        <small class="users__title-small">
+        <small class="users__title-small" v-once>
           ({{ filteredUsers.length }})
         </small>
       </h3>
