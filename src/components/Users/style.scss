@@ -88,3 +88,19 @@
   width: 2rem;
   cursor: not-allowed;
 }
+
+.users__empty-state {
+  padding: 4rem 0 5rem;
+  text-align: center;
+  height: 635px;
+}
+
+.users__empty-state-icon {
+  font-size: 3rem;
+  margin: 0 0 2rem;
+  color: $light-gray-1
+}
+
+.users__empty-state-text {
+  font-size: 0.9rem;
+}

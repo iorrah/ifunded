@@ -69,7 +69,7 @@
         </tr>
       </thead>
 
-      <tbody class="users__table-body">
+      <tbody class="users__table-body" v-if="filteredUsers.length > 0">
         <tr class="users__table_row" v-for="user in filteredUsers" v-bind:key="user.id">
           <td class="users__table-cell">{{ user.first_name }} {{ user.last_name }}</td>
           <td class="users__table-cell">{{ user.email }}</td>
@@ -80,6 +80,17 @@
               src="../../assets/action-icon.svg"
               class="users__table-row-action"
             />
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody v-else>
+        <tr>
+          <td colspan="4">
+            <div class="users__empty-state">
+              <p class="users__empty-state-icon">ʕ•́ᴥ•̀ʔっ</p>
+              <p class="users__empty-state-text">No results match this filter criteria</p>
+            </div>
           </td>
         </tr>
       </tbody>
