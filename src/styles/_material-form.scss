@@ -251,7 +251,7 @@
 }
 
 .material-form .error-message {
-  color: #f3173a;
+  color: $red;
   text-align: left;
   margin-top: 8px;
   display: none
@@ -260,7 +260,7 @@
 .material-form .invalid~label:not(.checkbox-label):not(.switch):not(.radio-label) {
   top: -8px;
   font-size: 14px;
-  color: #f3173a
+  color: $red
 }
 
 .material-form .intl-tel-input.invalid~label:not(.checkbox-label):not(.switch):not(.radio-label) {
@@ -280,12 +280,12 @@
 
 .material-form .invalid~.error-message {
   display: none;
-  color: #f3173a
+  color: $red
 }
 
 .material-form .question-error-message,
 .material-form .subquestion-error-message {
-  color: #f3173a;
+  color: $red;
   margin-top: 8px;
   padding: 10px 15px;
   background: #fee;
