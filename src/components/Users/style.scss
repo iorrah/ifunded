@@ -16,6 +16,48 @@
   top: -0.1rem;
 }
 
-table {
-  margin: 0 auto;
+.users__table {
+  width: 100%;
+  margin: 0 0 5rem;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.users__table-header {
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: $light-gray-3;
+}
+
+.users__table-body {
+  font-size: 1rem;
+}
+
+.users__table_row {
+  border-bottom: 1px solid $light-gray-3;
+}
+
+.users__table-cell {
+  padding: 1rem 0.8rem;
+}
+
+.users__table-cell--name {
+  width: 30%
+}
+
+.users__table-cell--email {
+  width: 60%
+}
+
+.users__table-cell--action {
+  width: 10%
+}
+
+.users__table-header-arrow {
+  padding: 0 0 0 0.7rem;
+}
+
+.users__table-row-action {
+  float: right;
+  padding: 0 1rem 0 0;
 }

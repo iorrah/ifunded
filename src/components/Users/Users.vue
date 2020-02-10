@@ -14,12 +14,46 @@
       </div>
     </div>
 
-    <table class="table">
-      <tr v-for="user in appUsers" v-bind:key="user.id">
-        <td>{{ user.first_name }}</td>
-        <td>{{ user.last_name }}</td>
-        <td>{{ user.email }}</td>
-      </tr>
+    <table class="users__table">
+      <thead class="users__table-header">
+        <tr>
+          <th class="users__table-cell users__table-cell--name">
+            Name
+
+            <img
+              src="../../assets/select-arrows.svg"
+              class="users__table-header-arrow"
+            />
+          </th>
+
+          <th class="users__table-cell users__table-cell--email">
+            Email
+
+            <img
+              src="../../assets/select-arrows.svg"
+              class="users__table-header-arrow"
+            />
+          </th>
+
+          <th class="users__table-cell users__table-cell--action">
+            &nbsp;
+          </th>
+        </tr>
+      </thead>
+
+      <tbody class="users__table-body">
+        <tr class="users__table_row" v-for="user in appUsers" v-bind:key="user.id">
+          <td class="users__table-cell">{{ user.first_name }} {{ user.last_name }}</td>
+          <td class="users__table-cell">{{ user.email }}</td>
+
+          <td class="users__table-cell">
+            <img
+              src="../../assets/action-icon.svg"
+              class="users__table-row-action"
+            />
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
@@ -29,8 +63,6 @@ import {
   ACTION_APP_GET_USERS,
   ACTION_APP_ADD_USER,
 } from '../../store/app.store';
-
-import './style.scss';
 
 export default {
   name: 'Users',
