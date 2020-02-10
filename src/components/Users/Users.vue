@@ -1,6 +1,6 @@
 <template>
-  <div class="users container">
-    <Filters :search.sync="search"  />
+  <div class="users container" v-if="appUsers.length > 0">
+    <Filters :search.sync="search" :creatorId.sync="creatorId" :appUsers="appUsers" />
 
     <div class="users__header flex__space-between">
       <h3 class="users__title">
@@ -102,13 +102,24 @@ export default {
       return this.$store.getters.getUsers;
     },
     filteredUsers() {
-      return this.getFilteredBySearch(this.appUsers, this.search);
+      let users = this.appUsers;
+
+      if (this.search !== '') {
+        users = this.getFilteredBySearch(users, this.search);
+      }
+
+      if (this.creatorId !== null) {
+        users = this.getFilteredByCreator(users, this.creatorId);
+      }
+
+      return users;
     },
   },
   data() {
     return {
       sort: 'asc',
       search: '',
+      creatorId: null,
     };
   },
   methods: {
@@ -132,6 +143,9 @@ export default {
         const userString = `${user.first_name} ${user.last_name} ${user.email}`;
         return userString.toLowerCase().indexOf(search.toLowerCase()) > -1;
       });
+    },
+    getFilteredByCreator(users, creatorId) {
+      return users.filter((user) => user.creator_id === creatorId, 10);
     },
   },
   mounted() {

@@ -40,11 +40,21 @@
         <div class="material-form__input-select filters__input-select">
           <div class="group select-group">
             <div class="jq-selectbox jqselect inpField dropup opened">
-              <select required="required" class="inpField inpField__select">
-                <option label="Everyone" selected="selected"></option>
-                <option label="Janet Weaver"></option>
-                <option label="Charles Morris"></option>
-                <option label="Tracey Ramos"></option>
+              <select
+                required="required"
+                class="inpField inpField__select"
+                @change="updateCreator($event)"
+              >
+                <option label="Everyone" value="banana" selected="selected"></option>
+
+                <option
+                  v-for="creator in creators"
+                  v-bind:key="creator.id"
+                  v-bind:value="creator.id"
+                  v-once
+                >
+                  {{creator.first_name}} {{creator.last_name}}
+                </option>
               </select>
 
               <div class="jq-selectbox__select">
@@ -108,10 +118,20 @@
 <script>
 export default {
   name: 'Filters',
-  props: ['search'],
+  props: ['search', 'appUsers', 'creatorId'],
+  computed: {
+    creators() {
+      const creatorsIds = this.appUsers.map((e) => e.creator_id);
+      const uniqueIds = creatorsIds.filter((item, pos) => creatorsIds.indexOf(item) === pos);
+      return uniqueIds.map((id) => this.appUsers.find((e) => e.id === id));
+    },
+  },
   methods: {
     updateSearch(e) {
       this.$emit('update:search', e.target.value);
+    },
+    updateCreator(e) {
+      this.$emit('update:creatorId', parseInt(e.target.value, 10));
     },
   },
 };
