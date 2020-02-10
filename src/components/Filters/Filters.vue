@@ -45,7 +45,7 @@
                 class="inpField inpField__select"
                 @change="updateCreator($event)"
               >
-                <option label="Everyone" value="banana" selected="selected"></option>
+                <option label="Everyone" value="0" selected="selected"></option>
 
                 <option
                   v-for="creator in creators"
@@ -147,6 +147,11 @@ export default {
     },
     creatorName() {
       const creator = this.creators.find((e) => e.id === this.$props.creatorId);
+
+      if (!creator) {
+        return '';
+      }
+
       return `${creator.first_name} ${creator.last_name}`;
     },
     months() {
@@ -161,10 +166,22 @@ export default {
       this.$emit('update:search', e.target.value);
     },
     updateCreator(e) {
-      this.$emit('update:creatorId', parseInt(e.target.value, 10));
+      const creatorId = e.target.value;
+
+      if (creatorId === '0') {
+        this.$emit('update:creatorId', null);
+      } else {
+        this.$emit('update:creatorId', parseInt(creatorId, 10));
+      }
     },
     updateMonth(e) {
-      this.$emit('update:month', parseInt(e.target.value, 10));
+      const month = e.target.value;
+
+      if (month === '0') {
+        this.$emit('update:month', null);
+      } else {
+        this.$emit('update:month', parseInt(month, 10));
+      }
     },
   },
 };

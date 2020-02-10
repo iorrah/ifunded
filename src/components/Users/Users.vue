@@ -132,7 +132,7 @@ export default {
         users = this.getFilteredByCreator(users, this.creatorId);
       }
 
-      if (this.month !== null && this.month > 0) {
+      if (this.month !== null) {
         users = this.getFilteredByMonth(users, this.month);
       }
 
