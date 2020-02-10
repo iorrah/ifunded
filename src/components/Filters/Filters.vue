@@ -15,7 +15,8 @@
               placeholder=""
               required=""
               class="inpField"
-              value=""
+              :value="search"
+              @input="updateSearch"
             />
 
             <img
@@ -107,5 +108,11 @@
 <script>
 export default {
   name: 'Filters',
+  props: ['search'],
+  methods: {
+    updateSearch(e) {
+      this.$emit('update:search', e.target.value);
+    },
+  },
 };
 </script>

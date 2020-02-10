@@ -1,13 +1,13 @@
 <template>
   <div class="users container">
-    <Filters />
+    <Filters :search.sync="search"  />
 
     <div class="users__header flex__space-between">
       <h3 class="users__title">
         Users
 
         <small class="users__title-small">
-          ({{ appUsers.length }})
+          ({{ filteredUsers.length }})
         </small>
       </h3>
 
@@ -52,7 +52,7 @@
       </thead>
 
       <tbody class="users__table-body">
-        <tr class="users__table_row" v-for="user in appUsers" v-bind:key="user.id">
+        <tr class="users__table_row" v-for="user in filteredUsers" v-bind:key="user.id">
           <td class="users__table-cell">{{ user.first_name }} {{ user.last_name }}</td>
           <td class="users__table-cell">{{ user.email }}</td>
 
@@ -73,7 +73,7 @@
       />
 
       <span class="users__pagination-label">
-        1-{{ appUsers.length }} of {{ appUsers.length }}
+        1-{{ filteredUsers.length }} of {{ filteredUsers.length }}
       </span>
 
       <img
@@ -96,16 +96,23 @@ import { sortAsc, sortDesc } from '../../utils/sorting';
 
 export default {
   name: 'Users',
-  props: {
-  },
+  props: [],
   computed: {
     appUsers() {
       return this.$store.getters.getUsers;
+    },
+    filteredUsers() {
+      // eslint-disable-next-line
+      return this.appUsers.filter((user) => {
+        const userString = `${user.first_name} ${user.last_name} ${user.email}`;
+        return userString.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
+      });
     },
   },
   data() {
     return {
       sort: 'asc',
+      search: '',
     };
   },
   methods: {
@@ -118,11 +125,11 @@ export default {
     sortUsers(prop) {
       if (this.sort === 'asc') {
         this.sort = 'desc';
-        return this.appUsers.sort((a, b) => sortAsc(a, b, prop));
+        return this.filteredUsers.sort((a, b) => sortAsc(a, b, prop));
       }
 
       this.sort = 'asc';
-      return this.appUsers.sort((a, b) => sortDesc(a, b, prop));
+      return this.filteredUsers.sort((a, b) => sortDesc(a, b, prop));
     },
   },
   mounted() {
