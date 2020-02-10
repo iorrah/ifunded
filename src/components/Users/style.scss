@@ -47,7 +47,12 @@
 }
 
 .users__table-cell--email {
-  width: 60%;
+  width: 30%;
+  cursor: pointer;
+}
+
+.users__table-cell--date {
+  width: 30%;
   cursor: pointer;
 }
 

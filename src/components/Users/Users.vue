@@ -50,6 +50,19 @@
             />
           </th>
 
+          <th
+            class="users__table-cell users__table-cell--date"
+            @click="sortUsers('created_date')"
+            title="Sort column by creation date"
+          >
+            Created at
+
+            <img
+              src="../../assets/select-arrows.svg"
+              class="users__table-header-arrow"
+            />
+          </th>
+
           <th class="users__table-cell users__table-cell--action">
             &nbsp;
           </th>
@@ -60,6 +73,7 @@
         <tr class="users__table_row" v-for="user in filteredUsers" v-bind:key="user.id">
           <td class="users__table-cell">{{ user.first_name }} {{ user.last_name }}</td>
           <td class="users__table-cell">{{ user.email }}</td>
+          <td class="users__table-cell">{{ formatDate(user.created_date) }}</td>
 
           <td class="users__table-cell">
             <img
@@ -98,6 +112,7 @@ import {
 } from '../../store/app.store';
 
 import { sortAsc, sortDesc } from '../../utils/sorting';
+import { formatDate } from '../../utils/date-formatter';
 
 export default {
   name: 'Users',
@@ -162,6 +177,9 @@ export default {
         const creationMonth = new Date(user.created_date).getMonth() + 1;
         return creationMonth === month;
       });
+    },
+    formatDate(date) {
+      return formatDate(date);
     },
   },
   mounted() {

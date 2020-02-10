@@ -5,7 +5,8 @@ const getRandomBetween = (min, max) => {
 
 // eslint-disable-next-line
 const getRandomDate = (year) => {
-  return `${year}-${getRandomBetween(1, 12)}-${getRandomBetween(1, 28)}`;
+  const date = `${year}-${getRandomBetween(1, 12)}-${getRandomBetween(1, 28)}`;
+  return new Date(date);
 };
 
 // eslint-disable-next-line
