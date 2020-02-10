@@ -90,18 +90,13 @@
                 @change="updateMonth($event)"
               >
                 <option label="" selected="selected">Anytime</option>
-                <option value="12" label="December"></option>
-                <option value="11" label="November"></option>
-                <option value="10" label="October"></option>
-                <option value="9" label="September"></option>
-                <option value="8" label="August"></option>
-                <option value="7" label="July"></option>
-                <option value="6" label="June"></option>
-                <option value="5" label="May"></option>
-                <option value="4" label="April"></option>
-                <option value="3" label="March"></option>
-                <option value="2" label="February"></option>
-                <option value="1" label="January"></option>
+
+                <option
+                  v-for="month in months"
+                  v-bind:key="month.id"
+                  v-bind:value="month.id"
+                  v-once
+                >{{ month.name }} 2019</option>
               </select>
 
               <div class="jq-selectbox__select">
@@ -153,6 +148,9 @@ export default {
     creatorName() {
       const creator = this.creators.find((e) => e.id === this.$props.creatorId);
       return `${creator.first_name} ${creator.last_name}`;
+    },
+    months() {
+      return months;
     },
     getMonthById() {
       return months.find((e) => e.id === this.month).name;
