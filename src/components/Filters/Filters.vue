@@ -59,7 +59,10 @@
 
               <div class="jq-selectbox__select">
                 <div class="jq-selectbox__select-text placeholder">
-                  Created by
+                  <span v-if="showCreatedBy">Created by</span>
+                  <span v-else>
+                    {{ creatorName }}
+                  </span>
                 </div>
 
                 <div class="jq-selectbox__trigger">
@@ -124,6 +127,13 @@ export default {
       const creatorsIds = this.appUsers.map((e) => e.creator_id);
       const uniqueIds = creatorsIds.filter((item, pos) => creatorsIds.indexOf(item) === pos);
       return uniqueIds.map((id) => this.appUsers.find((e) => e.id === id));
+    },
+    showCreatedBy() {
+      return this.$props.creatorId === null;
+    },
+    creatorName() {
+      const creator = this.creators.find((e) => e.id === this.$props.creatorId);
+      return `${creator.first_name} ${creator.last_name}`;
     },
   },
   methods: {
