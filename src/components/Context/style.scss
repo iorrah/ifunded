@@ -1,0 +1,53 @@
+.context {
+  display: block;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  background: $turquoise;
+  box-shadow: 0 4px 4px #0000000d;
+  color: $white;
+}
+
+.context__title {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 0 0 1.6rem;
+}
+
+.context__menu {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.context__menu-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1.3rem 0;
+}
+
+.context__menu-item:first-child {
+  margin-left: 0;
+}
+
+.context__menu-link {
+  color: $white;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.context__menu-link--active {
+  color: $white
+}
+
+.context__menu-indicator--active {
+  background: $white;
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  position: relative;
+  bottom: -1rem;
+  border-radius: 1rem 1rem 0 0;
+}
