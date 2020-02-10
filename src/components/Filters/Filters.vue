@@ -106,7 +106,10 @@
 
               <div class="jq-selectbox__select">
                 <div class="jq-selectbox__select-text placeholder">
-                  Creation date
+                  <span v-if="showCreationDate">Creation date</span>
+                  <span v-else>
+                    {{ getMonthById }} 2019
+                  </span>
                 </div>
 
                 <div class="jq-selectbox__trigger">
@@ -130,6 +133,8 @@
 </template>
 
 <script>
+import { months } from '../../utils/date-formatter';
+
 export default {
   name: 'Filters',
   props: ['search', 'appUsers', 'creatorId', 'month'],
@@ -142,9 +147,15 @@ export default {
     showCreatedBy() {
       return this.$props.creatorId === null;
     },
+    showCreationDate() {
+      return Number.isNaN(parseInt(this.$props.month, 10)) || this.$props.month === 0;
+    },
     creatorName() {
       const creator = this.creators.find((e) => e.id === this.$props.creatorId);
       return `${creator.first_name} ${creator.last_name}`;
+    },
+    getMonthById() {
+      return months.find((e) => e.id === this.month).name;
     },
   },
   methods: {
