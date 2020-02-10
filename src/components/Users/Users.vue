@@ -80,6 +80,8 @@ import {
   ACTION_APP_ADD_USER,
 } from '../../store/app.store';
 
+import { sortAsc, sortDesc } from '../../utils/sorting';
+
 export default {
   name: 'Users',
   props: {
@@ -102,37 +104,13 @@ export default {
       this.$store.dispatch(ACTION_APP_ADD_USER);
     },
     sortUsers(prop) {
-      const sortAsc = (a, b) => {
-        if (a[prop] < b[prop]) {
-          return -1;
-        }
-
-        if (a[prop] > b[prop]) {
-          return 1;
-        }
-
-        return 0;
-      };
-
-      const sortDesc = (a, b) => {
-        if (a[prop] > b[prop]) {
-          return -1;
-        }
-
-        if (a[prop] < b[prop]) {
-          return 1;
-        }
-
-        return 0;
-      };
-
       if (this.sort === 'asc') {
         this.sort = 'desc';
-        return this.appUsers.sort(sortAsc);
+        return this.appUsers.sort((a, b) => sortAsc(a, b, prop));
       }
 
       this.sort = 'asc';
-      return this.appUsers.sort(sortDesc);
+      return this.appUsers.sort((a, b) => sortDesc(a, b, prop));
     },
   },
   mounted() {
