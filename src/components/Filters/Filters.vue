@@ -89,7 +89,7 @@
                 class="inpField inpField__select"
                 @change="updateMonth($event)"
               >
-                <option label="" selected="selected">Anytime</option>
+                <option value="0" selected="selected">Anytime</option>
 
                 <option
                   v-for="month in months"
