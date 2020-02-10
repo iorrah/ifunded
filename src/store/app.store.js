@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import { parse } from '../utils/parser';
 
 export const ACTION_APP_GET_USERS = 'ActionAppGetUsers';
 export const ACTION_APP_ADD_USER = 'ActionAppAddUser';
@@ -24,7 +25,7 @@ const mutations = {
   // eslint-disable-next-line no-shadow
   [GET_USERS_VALUE]: (state, payload) => {
     // eslint-disable-next-line no-param-reassign
-    state.users = payload.data;
+    state.users = parse(payload.data);
   },
   // eslint-disable-next-line no-shadow
   [ADD_USER_VALUE]: (state, payload) => {
