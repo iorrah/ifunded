@@ -18,7 +18,7 @@
 
 .users__table {
   width: 100%;
-  margin: 0 0 5rem;
+  margin: 0 0 3rem;
   text-align: left;
   border-collapse: collapse;
 }
@@ -60,4 +60,24 @@
 .users__table-row-action {
   float: right;
   padding: 0 1rem 0 0;
+}
+
+.users__pagination {
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
+.users__pagination-label {
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  position: relative;
+  top: 0.4rem;
+  color: $medium-gray;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.users__pagination__arrow {
+  width: 2rem;
+  cursor: not-allowed;
 }

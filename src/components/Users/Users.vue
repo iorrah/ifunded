@@ -55,6 +55,22 @@
         </tr>
       </tbody>
     </table>
+
+    <div class="users__pagination">
+      <img
+        src="../../assets/arrow-left-circle.svg"
+        class="users__pagination__arrow"
+      />
+
+      <span class="users__pagination-label">
+        1-{{ appUsers.length }} of {{ appUsers.length }}
+      </span>
+
+      <img
+        src="../../assets/arrow-right-circle.svg"
+        class="users__pagination__arrow"
+      />
+    </div>
   </div>
 </template>
 

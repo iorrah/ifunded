@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>ui Arrow Left</title>
+    <desc>Created with Sketch.</desc>
+    <g id="02-Workspace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-01" transform="translate(-620.000000, -966.000000)">
+            <g id="ui-Pagination" transform="translate(621.000000, 967.000000)">
+                <g id="ui-Arrow-Left">
+                    <circle id="Oval" stroke="#D8DFE4" fill="#FFFFFF" cx="11.5" cy="11.5" r="11.5"></circle>
+                    <g id="arrow_back-24px" transform="translate(2.000000, 2.000000)">
+                        <polygon id="Path" points="0 0 18.9599991 0 18.9599991 18.9599991 0 18.9599991"></polygon>
+                        <polygon id="Path" fill="#D8DFE4" fill-rule="nonzero" points="15.7999992 8.68999958 6.1856997 8.68999958 10.6017995 4.27389979 9.47999954 3.15999985 3.15999985 9.47999954 9.47999954 15.7999992 10.5938995 14.6860993 6.1856997 10.2699995 15.7999992 10.2699995"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
