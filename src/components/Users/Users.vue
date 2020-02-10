@@ -17,7 +17,11 @@
     <table class="users__table">
       <thead class="users__table-header">
         <tr>
-          <th class="users__table-cell users__table-cell--name" @click="sortUsers('first_name')">
+          <th
+            class="users__table-cell users__table-cell--name"
+            @click="sortUsers('last_name')"
+            title="Sort column by Last Name"
+          >
             Name
 
             <img
@@ -26,7 +30,11 @@
             />
           </th>
 
-          <th class="users__table-cell users__table-cell--email" @click="sortUsers('email')">
+          <th
+            class="users__table-cell users__table-cell--email"
+            @click="sortUsers('email')"
+            title="Sort column by Email"
+          >
             Email
 
             <img
