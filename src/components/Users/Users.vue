@@ -102,7 +102,7 @@ export default {
       return this.$store.getters.getUsers;
     },
     filteredUsers() {
-      return this.getFilteredUsers(this.appUsers, this.search);
+      return this.getFilteredBySearch(this.appUsers, this.search);
     },
   },
   data() {
@@ -127,7 +127,7 @@ export default {
       this.sort = 'asc';
       return this.appUsers.sort((a, b) => sortDesc(a, b, prop));
     },
-    getFilteredUsers(users, search) {
+    getFilteredBySearch(users, search) {
       return users.filter((user) => {
         const userString = `${user.first_name} ${user.last_name} ${user.email}`;
         return userString.toLowerCase().indexOf(search.toLowerCase()) > -1;
