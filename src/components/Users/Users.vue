@@ -1,5 +1,7 @@
 <template>
   <div class="users container">
+    <Filters />
+
     <div class="users__header flex__space-between">
       <h3 class="users__title">
         Users
@@ -83,6 +85,8 @@
 </template>
 
 <script>
+import Filters from '../Filters/index';
+
 import {
   ACTION_APP_GET_USERS,
   ACTION_APP_ADD_USER,
@@ -123,6 +127,9 @@ export default {
   },
   mounted() {
     this.getUsers();
+  },
+  components: {
+    Filters,
   },
 };
 </script>
