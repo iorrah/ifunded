@@ -42,9 +42,10 @@
           <div class="group select-group">
             <div class="jq-selectbox jqselect inpField dropup opened">
               <select required="required" class="inpField inpField__select">
-                <option label="Janet Weaver" selected="selected"></option>
-                <option label="Charles Morris" selected=""></option>
-                <option label="Tracey Ramos" selected=""></option>
+                <option label="Everyone" selected="selected"></option>
+                <option label="Janet Weaver"></option>
+                <option label="Charles Morris"></option>
+                <option label="Tracey Ramos"></option>
               </select>
 
               <div class="jq-selectbox__select">
@@ -72,11 +73,12 @@
           <div class="group select-group">
             <div class="jq-selectbox jqselect inpField dropup opened">
               <select required="required" class="inpField inpField__select">
-                <option label="October" selected=""></option>
-                <option label="November" selected=""></option>
-                <option label="December" selected=""></option>
-                <option label="January" selected=""></option>
-                <option label="February" selected="selected"></option>
+                <option label="All dates" selected="selected"></option>
+                <option label="February"></option>
+                <option label="January"></option>
+                <option label="December"></option>
+                <option label="November"></option>
+                <option label="October"></option>
               </select>
 
               <div class="jq-selectbox__select">
