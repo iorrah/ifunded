@@ -102,11 +102,7 @@ export default {
       return this.$store.getters.getUsers;
     },
     filteredUsers() {
-      // eslint-disable-next-line
-      return this.appUsers.filter((user) => {
-        const userString = `${user.first_name} ${user.last_name} ${user.email}`;
-        return userString.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
-      });
+      return this.getFilteredUsers(this.appUsers, this.search);
     },
   },
   data() {
@@ -130,6 +126,12 @@ export default {
 
       this.sort = 'asc';
       return this.appUsers.sort((a, b) => sortDesc(a, b, prop));
+    },
+    getFilteredUsers(users, search) {
+      return users.filter((user) => {
+        const userString = `${user.first_name} ${user.last_name} ${user.email}`;
+        return userString.toLowerCase().indexOf(search.toLowerCase()) > -1;
+      });
     },
   },
   mounted() {
