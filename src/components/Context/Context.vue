@@ -1,6 +1,6 @@
 <template>
   <div class="context container-fluid">
-    <h1 class="context__title">Platform uses</h1>
+    <h1 class="context__title">Platform users</h1>
 
     <ul class="context__menu">
       <li class="context__menu-item">
