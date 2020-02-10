@@ -1,6 +1,18 @@
 <template>
-  <div class="users">
-    <h3>Users</h3>
+  <div class="users container">
+    <div class="users__header flex__space-between">
+      <h3 class="users__title">
+        Users
+
+        <small class="users__title-small">
+          ({{ appUsers.length }})
+        </small>
+      </h3>
+
+      <div>
+        <button type="button" class="button button--primary">Add User</button>
+      </div>
+    </div>
 
     <table class="table">
       <tr v-for="user in appUsers" v-bind:key="user.id">
