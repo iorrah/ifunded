@@ -1,4 +1,9 @@
+// Global styles
 @import 'variables.scss';
 @import 'generic.scss';
 @import 'grid.scss';
+@import 'helpers.scss';
 @import 'material-form.scss';
+
+// Modular styles
+@import '../components/Navbar/style.scss';
