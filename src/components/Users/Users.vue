@@ -102,8 +102,11 @@
         class="users__pagination__arrow"
       />
 
-      <span class="users__pagination-label">
+      <span class="users__pagination-label" v-if="filteredUsers.length > 0">
         1-{{ filteredUsers.length }} of {{ filteredUsers.length }}
+      </span>
+      <span class="users__pagination-label" v-else>
+        0 of 0
       </span>
 
       <img
