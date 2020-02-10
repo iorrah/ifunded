@@ -44,11 +44,9 @@
                 <input
                   data-message="The format of your email is incorrect"
                   type="text"
-                  name="_username"
                   placeholder=""
                   required=""
                   class="inpField"
-                  id="username"
                   value=""
                 />
 
@@ -75,7 +73,7 @@
                 <div class="jq-selectbox jqselect inpField dropup opened">
                   <select required="required" class="inpField inpField__select">
                     <option label="English" selected="selected"></option>
-                    <option label="German" selected=""></option>
+                    <option label="German"></option>
                   </select>
 
                   <div class="jq-selectbox__select">

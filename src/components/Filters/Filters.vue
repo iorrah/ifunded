@@ -12,11 +12,9 @@
             <input
               data-message="The format of your email is incorrect"
               type="text"
-              name="_username"
               placeholder=""
               required=""
               class="inpField"
-              id="username"
               value=""
             />
 
