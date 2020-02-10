@@ -17,7 +17,9 @@
       </h3>
 
       <div>
-        <button type="button" class="button button--primary">Add User</button>
+        <button type="button" class="button button--primary" @click="openModal">
+          Add User
+        </button>
       </div>
     </div>
 
@@ -114,11 +116,16 @@
         class="users__pagination__arrow"
       />
     </div>
+
+    <div v-if="modal === true">
+      <Modal />
+    </div>
   </div>
 </template>
 
 <script>
 import Filters from '../Filters/index';
+import Modal from '../Modal/index';
 
 import {
   ACTION_APP_GET_USERS,
@@ -159,6 +166,7 @@ export default {
       search: '',
       creatorId: null,
       month: null,
+      modal: false,
     };
   },
   methods: {
@@ -195,12 +203,16 @@ export default {
     formatDate(date) {
       return formatDate(date);
     },
+    openModal() {
+      this.modal = true;
+    },
   },
   mounted() {
     this.getUsers();
   },
   components: {
     Filters,
+    Modal,
   },
 };
 </script>
