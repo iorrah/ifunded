@@ -125,11 +125,11 @@ export default {
     sortUsers(prop) {
       if (this.sort === 'asc') {
         this.sort = 'desc';
-        return this.filteredUsers.sort((a, b) => sortAsc(a, b, prop));
+        return this.appUsers.sort((a, b) => sortAsc(a, b, prop));
       }
 
       this.sort = 'asc';
-      return this.filteredUsers.sort((a, b) => sortDesc(a, b, prop));
+      return this.appUsers.sort((a, b) => sortDesc(a, b, prop));
     },
   },
   mounted() {
