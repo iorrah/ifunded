@@ -11,8 +11,8 @@
       <h3 class="users__title">
         Users
 
-        <small class="users__title-small" v-once>
-          ({{ filteredUsers.length }})
+        <small class="users__title-small">
+          ({{ appUsers.length }})
         </small>
       </h3>
 
@@ -174,8 +174,8 @@ export default {
     getUsers() {
       this.$store.dispatch(ACTION_APP_GET_USERS);
     },
-    addUser() {
-      this.$store.dispatch(ACTION_APP_ADD_USER);
+    addUser(user) {
+      this.$store.dispatch(ACTION_APP_ADD_USER, user);
     },
     sortUsers(prop) {
       if (this.sort === 'asc') {
@@ -208,8 +208,7 @@ export default {
       this.modal = true;
     },
     addNewUser(user) {
-      console.log('New user being created:');
-      console.log(JSON.stringify(user));
+      this.addUser(user);
     },
   },
   mounted() {

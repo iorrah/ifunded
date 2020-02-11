@@ -41,8 +41,17 @@ const actions = {
   },
   [ACTION_APP_ADD_USER]: async (context, payload) => {
     // eslint-disable-next-line no-unused-vars
-    const { data } = await Axios.post('https://reqres.in/api/users', { first_name: 'Jane', last_name: 'Doe', email: 'jane.doe@email.com' });
-    context.commit(ADD_USER_VALUE, payload);
+    try {
+      const response = await Axios.post('https://reqres.in/api/users', payload);
+
+      if (response.status === 201) {
+        context.commit(ADD_USER_VALUE, response.data);
+      } else {
+        console.error(`Server Error ${response.status}: the REST API could not create the new user`);
+      }
+    } catch (e) {
+      console.error(`Internal Error (${e.response}): the client could not create the new user`);
+    }
   },
 };
 
