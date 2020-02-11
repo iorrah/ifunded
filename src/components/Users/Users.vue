@@ -78,10 +78,12 @@
           <td class="users__table-cell">{{ formatDate(user.created_date) }}</td>
 
           <td class="users__table-cell">
-            <img
-              src="../../assets/action-icon.svg"
-              class="users__table-row-action"
-            />
+            <div class="users__table-row-action-container" @click="() => openEditModal(user)">
+              <img
+                src="../../assets/action-icon.svg"
+                class="users__table-row-action"
+              />
+            </div>
           </td>
         </tr>
       </tbody>
@@ -120,6 +122,9 @@
     <div v-if="addModal === true">
       <AddModal :dispatschAddUser="dispatschAddUser" />
     </div>
+
+    <div v-if="editModal === true">
+      <EditModal :dispatschEditUser="dispatschEditUser" :user="user" />
     </div>
 
     <div class="snackbar__container">
@@ -133,6 +138,7 @@
 <script>
 import Filters from '../Filters/index';
 import AddModal from '../AddModal/index';
+import EditModal from '../EditModal/index';
 
 import {
   ACTION_APP_GET_USERS,
@@ -174,6 +180,7 @@ export default {
       creatorId: null,
       month: null,
       addModal: false,
+      editModal: false,
       user: null,
       showUserCreated: false,
     };
@@ -185,6 +192,9 @@ export default {
     dispatschAddUser(user) {
       this.$store.dispatch(ACTION_APP_ADD_USER, user);
       this.showUserCreatedTmer();
+    },
+    dispatschEditUser(user) {
+      this.$store.dispatch('ACTION_APP_EDIT_USER', user);
     },
     sortUsers(prop) {
       if (this.sort === 'asc') {
@@ -216,6 +226,9 @@ export default {
     openAddModal() {
       this.addModal = true;
     },
+    openEditModal(user) {
+      this.user = user;
+      this.editModal = true;
     },
     showUserCreatedTmer() {
       this.showUserCreated = true;
@@ -230,7 +243,8 @@ export default {
   },
   components: {
     Filters,
-    Modal,
+    AddModal,
+    EditModal,
   },
 };
 </script>
