@@ -15,7 +15,7 @@ const isValidString = (name) => {
     return false;
   }
 
-  if (name.length <= 3) {
+  if (name.length < 3) {
     return false;
   }
 
