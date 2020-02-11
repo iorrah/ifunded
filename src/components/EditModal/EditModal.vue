@@ -89,6 +89,10 @@
             </div>
           </div>
 
+          <p class="modal__error" v-if="errorMessage !== ''">
+            {{ errorMessage }}
+          </p>
+
           <button
             type="button"
             class="button button--secondary modal__button--secondary"
@@ -107,6 +111,8 @@
 </template>
 
 <script>
+import { isValidName, isValidEmail } from '../../utils/validation';
+
 export default {
   name: 'EditModal',
   data() {
@@ -114,6 +120,7 @@ export default {
       firstName: '',
       lastName: '',
       email: '',
+      errorMessage: '',
     };
   },
   methods: {
@@ -126,6 +133,28 @@ export default {
       };
     },
     saveChanges() {
+      if (isValidName(this.firstName)) {
+        if (isValidName(this.lastName)) {
+          if (isValidEmail(this.email)) {
+            this.prepareToDispatch(
+              this.firstName,
+              this.lastName,
+              this.email,
+            );
+          } else {
+            this.showError('Invalid email address');
+          }
+        } else {
+          this.showError('Invalid last name');
+        }
+      } else {
+        this.showError('Invalid first name');
+      }
+    },
+    showError(error) {
+      this.errorMessage = error;
+    },
+    prepareToDispatch() {
       const user = this.buildUser(this.firstName, this.lastName, this.email);
       this.$props.dispatschEditUser(user);
     },
