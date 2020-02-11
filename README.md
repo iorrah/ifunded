@@ -1,16 +1,16 @@
-# iFunded - Code Challenge
+# [iFunded - Code Challenge](https://iorrah.github.io/ifunded)
 
 ![Project Cover](src/assets/preview.png)
 
-"iFunded - Code Challenge" is a project built as part of the hiring process at the iFunded company. The project brief required that I developed a simple web app using Vue.js where the user could see a list of the users, add new users and edit their first/last name + email.
+"iFunded - Code Challenge" is a project built as part of the hiring process at the [iFunded](https://ifunded.de) company. The project brief required that I developed a simple web app using [Vue.js](https://vuejs.org) where the user could see a list of the users, add new users and edit their first/last name + email.
 
-My proposal involves creating a CRM platform to aggregate and manipulate the service<>user relationship.
+My proposal involves creating a [CRM](https://en.wikipedia.org/wiki/Customer_relationship_management) platform to aggregate and manipulate the service<>user relationship.
 
-To achieve this result, I started with the User Experience aspects of the interface, then moved into the User Interface details and lastly into Frontend Development. To gain time, I have made use of Vue CLI to quickly scaffold the project. The modals and snackers have all been created with pure Vanilla Javascript and Vue.js state manipulation.
+To achieve this result, I started with the User Experience aspects of the interface, then moved into the User Interface details and lastly into Frontend Development. To gain time, I have made use of [Vue CLI](https://cli.vuejs.org) to quickly scaffold the project. The modals and snackers have all been created with pure Vanilla Javascript and Vue.js state manipulation.
 
-I deliberately made the decision of not using any styling library and wrote the SASS/CSS code by myself.
+I deliberately made the decision of not using any styling library and wrote the [SASS/CSS](https://sass-lang.com) code by myself.
 
-It was my intention to use Vuex to manipulate the global source of data given the fact that I am working with a REST API and keeping the data-lifecycle legible becomes much easier when data-manipulation is modularised. Vue Router was left outside given the fact that the project brief only requires one page and the state does not need to be persisted across multiple routes.
+It was my intention to use [Vuex](https://vuex.vuejs.org) to manipulate the global source of data given the fact that I am working with a [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer) and keeping the data-lifecycle legible becomes much easier when data-manipulation is modularised. [Vue Router](https://router.vuejs.org) was left outside given the fact that the project brief only requires one page and the state does not need to be persisted across multiple routes.
 
 See the Live Demo for this project [here](https://iorrah.github.io/ifunded).
 
