@@ -118,8 +118,8 @@
     </div>
 
     <div v-if="modal === true">
-      <Modal />
     </div>
+      <Modal :addNewUser="addNewUser" />
   </div>
 </template>
 
@@ -167,6 +167,7 @@ export default {
       creatorId: null,
       month: null,
       modal: false,
+      user: null,
     };
   },
   methods: {
@@ -205,6 +206,10 @@ export default {
     },
     openModal() {
       this.modal = true;
+    },
+    addNewUser(user) {
+      console.log('New user being created:');
+      console.log(JSON.stringify(user));
     },
   },
   mounted() {

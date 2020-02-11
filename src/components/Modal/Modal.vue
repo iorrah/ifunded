@@ -21,6 +21,7 @@
                   placeholder=""
                   required=""
                   class="inpField"
+                  v-model="firstName"
                 />
 
                 <span class="highlight"></span>
@@ -44,6 +45,7 @@
                   placeholder=""
                   required=""
                   class="inpField"
+                  v-model="lastName"
                 />
 
                 <span class="highlight"></span>
@@ -69,6 +71,7 @@
                   placeholder=""
                   required=""
                   class="inpField"
+                  v-model="email"
                 />
 
                 <span class="highlight"></span>
@@ -89,7 +92,7 @@
             Cancel
           </button>
 
-          <button type="button" class="button button--primary">
+          <button type="button" class="button button--primary" @click="addUser">
             Add User
           </button>
         </div>
@@ -101,5 +104,28 @@
 <script>
 export default {
   name: 'Modal',
+  data() {
+    return {
+      firstName: '',
+      lastName: '',
+      email: '',
+    };
+  },
+  methods: {
+    buildUser(firstName, lastName, email) {
+      return {
+        first_name: firstName,
+        last_name: lastName,
+        email,
+        creator_id: 1,
+        created_date: new Date(),
+      };
+    },
+    addUser() {
+      const user = this.buildUser(this.firstName, this.lastName, this.email);
+      this.$props.addNewUser(user);
+    },
+  },
+  props: ['addNewUser'],
 };
 </script>
