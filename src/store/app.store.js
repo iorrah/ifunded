@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import { parse } from '../utils/parser';
+import { handleInternalError, handleServerError } from '../utils/handle-error';
 
 export const ACTION_APP_GET_USERS = 'ActionAppGetUsers';
 export const ACTION_APP_ADD_USER = 'ActionAppAddUser';
@@ -60,10 +61,10 @@ const actions = {
       if (response.status === 201) {
         context.commit(ADD_USER_VALUE, response.data);
       } else {
-        console.error(`Server Error ${response.status}: the REST API could not create the new user`);
+        handleServerError(response.status);
       }
     } catch (e) {
-      console.error(`Internal Error (${e.response}): the client could not create the new user`);
+      handleInternalError(e.response);
     }
   },
 };
