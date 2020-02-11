@@ -30,7 +30,7 @@ Setup the project
 npm install
 ```
 
-### 3. Start the local server
+## 3. Start the local server
 
 Compiles and hot-reloads for development
 
@@ -38,7 +38,7 @@ Compiles and hot-reloads for development
 npm run serve
 ```
 
-### 4. Further reference
+## 4. Further reference
 
 #### Compiles and minifies for production
 ```
