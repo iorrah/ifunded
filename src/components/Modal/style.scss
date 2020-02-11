@@ -21,8 +21,54 @@
 }
 
 .modal__card {
-  width: 60rem;
-  height: 40rem;
+  width: 40rem;
   background: $white;
   border-radius: 0.2rem;
+  padding: 0;
+}
+
+.modal__header {
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+
+.modal__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.modal__close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.modal__body {
+  padding: 1rem 0 2.8rem;
+  text-align: center;
+}
+
+.modal__material-form--email {
+  margin: 0 0 2.5rem;
+}
+
+.modal__input-text--first-name,
+.modal__input-text--last-name {
+  width: 200px;
+}
+
+.modal__input-text--last-name,
+.modal__input-text--email {
+  margin-right: 0;
+}
+
+.modal__input-text--email {
+  width: 432px;
+}
+
+.modal__button--secondary {
+  margin: 0 1rem 0 0;
 }

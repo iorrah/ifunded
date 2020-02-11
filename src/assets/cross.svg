@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="33px" viewBox="0 0 35 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>ui Close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="02-Workspace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-02" transform="translate(-969.000000, -323.000000)">
+            <g id="ui-Close" transform="translate(969.000000, 323.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="35" height="33"></rect>
+                <path d="M24.5563492,8 L25.263456,8.70710678 L17.839,16.132 L25.263456,23.5563492 L24.5563492,24.263456 L17.132,16.839 L9.70710678,24.263456 L9,23.5563492 L16.425,16.132 L9,8.70710678 L9.70710678,8 L17.132,15.425 L24.5563492,8 Z" id="Combined-Shape" fill="#62697F"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -16,11 +16,24 @@
   background: $turquoise;
   color: $white;
   border-color: $turquoise;
+
+  &:hover,
+  &:focus {
+    background: $turquoise-intense;
+    color: $white;
+    border-color: $turquoise-intense;
+  }
 }
 
-.button--primary:hover,
-.button--primary:focus {
-  background: $turquoise-intense;
-  color: $white;
-  border-color: $turquoise-intense;
+.button--secondary {
+  background: $white;
+  color: $turquoise;
+  border-color: $turquoise;
+
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $turquoise-intense;
+    border-color: $turquoise-intense;
+  }
 }
