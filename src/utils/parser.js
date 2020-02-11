@@ -1,3 +1,11 @@
+/*
+ * I'm adding new attributes (creator_id and created_date)
+ * and random values to the data because I want to build
+ * filtering and sorting features and unfortunately the users
+ * payload that is coming from Reqres has few attributes:
+ * id, first_name, last_name, email, avatar
+ */
+
 // eslint-disable-next-line
 const getRandomBetween = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
