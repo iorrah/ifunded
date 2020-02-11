@@ -73,3 +73,10 @@
 .modal__button--secondary {
   margin: 0 1rem 0 0;
 }
+
+.modal__error {
+  color: $red;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 0 2.7rem;
+}

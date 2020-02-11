@@ -89,6 +89,10 @@
             </div>
           </div>
 
+          <p class="modal__error" v-if="errorMessage !== ''">
+            {{ errorMessage }}
+          </p>
+
           <button
             type="button"
             class="button button--secondary modal__button--secondary"
@@ -114,6 +118,7 @@ export default {
       firstName: '',
       lastName: '',
       email: '',
+      errorMessage: '',
     };
   },
   methods: {
@@ -127,6 +132,70 @@ export default {
       };
     },
     addUser() {
+      if (this.isValidName(this.firstName)) {
+        if (this.isValidName(this.lastName)) {
+          if (this.isValidEmail(this.email)) {
+            this.prepareToDispatch(
+              this.firstName,
+              this.lastName,
+              this.email,
+            );
+          } else {
+            this.showError('Invalid email address');
+          }
+        } else {
+          this.showError('Invalid last name');
+        }
+      } else {
+        this.showError('Invalid first name');
+      }
+    },
+    isValidName(name) {
+      if (name.trim() === '') {
+        return false;
+      }
+
+      if (name === null) {
+        return false;
+      }
+
+      if (name === undefined) {
+        return false;
+      }
+
+      if (!Number.isNaN(parseInt(name, 10))) {
+        return false;
+      }
+
+      if (name.length <= 3) {
+        return false;
+      }
+
+      return true;
+    },
+    isValidEmail(email) {
+      if (this.isValidName(email) === false) {
+        return false;
+      }
+
+      if (email.indexOf('@') === -1) {
+        return false;
+      }
+
+      if (email.indexOf('@') === 0) {
+        return false;
+      }
+
+      if (email.indexOf('@') === (email.length - 1)) {
+        return false;
+      }
+
+      return true;
+    },
+    showError(error) {
+      this.errorMessage = error;
+    },
+    prepareToDispatch() {
       const user = this.buildUser(this.firstName, this.lastName, this.email);
       this.$props.dispatschAddUser(user);
     },
