@@ -120,6 +120,12 @@
     <div v-if="modal === true">
       <Modal :dispatschAddUser="dispatschAddUser" />
     </div>
+
+    <div class="snackbar__container">
+      <div class="snackbar" v-if="showUserCreated === true">
+        User created successfully
+      </div>
+    </div>
   </div>
 </template>
 
@@ -168,6 +174,7 @@ export default {
       month: null,
       modal: false,
       user: null,
+      showUserCreated: false,
     };
   },
   methods: {
@@ -176,6 +183,7 @@ export default {
     },
     dispatschAddUser(user) {
       this.$store.dispatch(ACTION_APP_ADD_USER, user);
+      this.showUserCreatedTmer();
     },
     sortUsers(prop) {
       if (this.sort === 'asc') {
@@ -206,6 +214,13 @@ export default {
     },
     openModal() {
       this.modal = true;
+    },
+    showUserCreatedTmer() {
+      this.showUserCreated = true;
+
+      setTimeout(() => {
+        this.showUserCreated = false;
+      }, 2000);
     },
   },
   mounted() {
