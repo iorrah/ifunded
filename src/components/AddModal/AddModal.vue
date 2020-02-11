@@ -103,7 +103,7 @@
 
 <script>
 export default {
-  name: 'Modal',
+  name: 'AddModal',
   data() {
     return {
       firstName: '',
