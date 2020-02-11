@@ -4,9 +4,11 @@ import { handleInternalError, handleServerError } from '../utils/handle-error';
 
 export const ACTION_APP_GET_USERS = 'ActionAppGetUsers';
 export const ACTION_APP_ADD_USER = 'ActionAppAddUser';
+export const ACTION_APP_EDIT_USER = 'ActionAppEditUser';
 
 const GET_USERS_VALUE = 'GetUsersValue';
 const ADD_USER_VALUE = 'AddUserValue';
+const EDIT_USER_VALUE = 'EditUserValue';
 
 const API_HOST = 'https://reqres.in/api';
 const API_USERS_URI = 'users';
@@ -46,6 +48,23 @@ const mutations = {
       created_date: new Date(payload.created_date),
     });
   },
+  // eslint-disable-next-line no-shadow
+  [EDIT_USER_VALUE]: (state, payload) => {
+    const editedUser = {
+      ...payload,
+      created_date: new Date(payload.created_date),
+    };
+
+    const users = state.users.map((user) => {
+      if (user.id === editedUser.id) {
+        return editedUser;
+      }
+
+      return user;
+    });
+
+    state.users = users;
+  },
 };
 
 // eslint-disable-next-line no-unused-vars
@@ -60,6 +79,19 @@ const actions = {
 
       if (response.status === 201) {
         context.commit(ADD_USER_VALUE, response.data);
+      } else {
+        handleServerError(response.status);
+      }
+    } catch (e) {
+      handleInternalError(e.response);
+    }
+  },
+  [ACTION_APP_EDIT_USER]: async (context, payload) => {
+    try {
+      const response = await Axios.put(API_USERS_URL, payload);
+
+      if (response.status === 200) {
+        context.commit(EDIT_USER_VALUE, response.data);
       } else {
         handleServerError(response.status);
       }

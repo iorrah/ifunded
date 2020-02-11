@@ -143,6 +143,7 @@ import EditModal from '../EditModal/index';
 import {
   ACTION_APP_GET_USERS,
   ACTION_APP_ADD_USER,
+  ACTION_APP_EDIT_USER,
 } from '../../store/app.store';
 
 import { sortAsc, sortDesc } from '../../utils/sorting';
@@ -194,7 +195,7 @@ export default {
       this.showUserCreatedTmer();
     },
     dispatschEditUser(user) {
-      this.$store.dispatch('ACTION_APP_EDIT_USER', user);
+      this.$store.dispatch(ACTION_APP_EDIT_USER, user);
     },
     sortUsers(prop) {
       if (this.sort === 'asc') {
