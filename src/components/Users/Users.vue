@@ -198,6 +198,7 @@ export default {
     dispatschAddUser(user) {
       this.$store.dispatch(ACTION_APP_ADD_USER, user);
       this.showUserCreatedTmer();
+      this.addModal = false;
     },
     dispatschEditUser(user) {
       this.$store.dispatch(ACTION_APP_EDIT_USER, user);
