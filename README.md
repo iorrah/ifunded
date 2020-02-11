@@ -1,11 +1,25 @@
-# ifunded
+# iFunded - Code Challenge
 
-## Project setup
+## Start by cloning the project
+
+Clone with SSH
+
+```
+git clone git@github.com:iorrah/ifunded.git
+```
+
+## Install the dependencies
+
+Setup the project
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Start the local server
+
+Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
@@ -29,6 +43,3 @@ npm run test:e2e
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
