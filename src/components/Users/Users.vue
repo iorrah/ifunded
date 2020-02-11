@@ -127,7 +127,11 @@
     </div>
 
     <div v-if="editModal === true">
-      <EditModal :dispatschEditUser="dispatschEditUser" :user="user" />
+      <EditModal
+        :dispatschEditUser="dispatschEditUser"
+        :closeEditModal="closeEditModal"
+        :user="user"
+      />
     </div>
 
     <div class="snackbar__container">

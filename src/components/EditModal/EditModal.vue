@@ -8,6 +8,7 @@
           <img
             src="../../assets/cross.svg"
             class="modal__close-modal"
+            @click="closeEditModalFromWithin"
           />
         </div>
 
@@ -88,7 +89,11 @@
             </div>
           </div>
 
-          <button type="button" class="button button--secondary modal__button--secondary">
+          <button
+            type="button"
+            class="button button--secondary modal__button--secondary"
+            @click="closeEditModalFromWithin"
+          >
             Cancel
           </button>
 
@@ -124,12 +129,15 @@ export default {
       const user = this.buildUser(this.firstName, this.lastName, this.email);
       this.$props.dispatschEditUser(user);
     },
+    closeEditModalFromWithin() {
+      this.$props.closeEditModal();
+    },
   },
   created() {
     this.firstName = this.$props.user.first_name;
     this.lastName = this.$props.user.last_name;
     this.email = this.$props.user.email;
   },
-  props: ['dispatschEditUser', 'user'],
+  props: ['dispatschEditUser', 'user', 'closeEditModal'],
 };
 </script>
