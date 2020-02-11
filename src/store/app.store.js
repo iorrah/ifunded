@@ -7,6 +7,17 @@ export const ACTION_APP_ADD_USER = 'ActionAppAddUser';
 const GET_USERS_VALUE = 'GetUsersValue';
 const ADD_USER_VALUE = 'AddUserValue';
 
+const API_HOST = 'https://reqres.in/api';
+const API_USERS_URI = 'users';
+const API_USERS_URL = `${API_HOST}/${API_USERS_URI}`;
+
+const API_PARAMS = {
+  total: 16,
+  per_page: 16,
+  page: 1,
+  total_pages: 1,
+};
+
 // eslint-disable-next-line no-unused-vars
 const state = {
   users: [],
@@ -38,13 +49,13 @@ const mutations = {
 
 // eslint-disable-next-line no-unused-vars
 const actions = {
-  [ACTION_APP_GET_USERS]: async (context /* , payload */) => {
-    const { data } = await Axios.get('https://reqres.in/api/users?total=16&per_page=16&page=1&total_pages=1');
+  [ACTION_APP_GET_USERS]: async (context) => {
+    const { data } = await Axios.get(API_USERS_URL, { params: API_PARAMS });
     context.commit(GET_USERS_VALUE, data);
   },
   [ACTION_APP_ADD_USER]: async (context, payload) => {
     try {
-      const response = await Axios.post('https://reqres.in/api/users', payload);
+      const response = await Axios.post(API_USERS_URL, payload);
 
       if (response.status === 201) {
         context.commit(ADD_USER_VALUE, response.data);
