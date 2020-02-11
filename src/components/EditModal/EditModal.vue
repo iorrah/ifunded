@@ -133,22 +133,26 @@ export default {
       };
     },
     saveChanges() {
-      if (isValidName(this.firstName)) {
-        if (isValidName(this.lastName)) {
-          if (isValidEmail(this.email)) {
-            this.prepareToDispatch(
-              this.firstName,
-              this.lastName,
-              this.email,
-            );
+      if (this.hasChanged(this.firstName, this.lastName, this.email)) {
+        if (isValidName(this.firstName)) {
+          if (isValidName(this.lastName)) {
+            if (isValidEmail(this.email)) {
+              this.prepareToDispatch(
+                this.firstName,
+                this.lastName,
+                this.email,
+              );
+            } else {
+              this.showError('Invalid email address');
+            }
           } else {
-            this.showError('Invalid email address');
+            this.showError('Invalid last name');
           }
         } else {
-          this.showError('Invalid last name');
+          this.showError('Invalid first name');
         }
       } else {
-        this.showError('Invalid first name');
+        this.closeEditModalFromWithin();
       }
     },
     showError(error) {
@@ -160,6 +164,23 @@ export default {
     },
     closeEditModalFromWithin() {
       this.$props.closeEditModal();
+    },
+    hasChanged(firstName, lastName, email) {
+      const { user } = this.$props;
+
+      if (firstName !== user.first_name) {
+        return true;
+      }
+
+      if (lastName !== user.last_name) {
+        return true;
+      }
+
+      if (email !== user.email) {
+        return true;
+      }
+
+      return false;
     },
   },
   created() {
