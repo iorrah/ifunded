@@ -8,6 +8,7 @@
           <img
             src="../../assets/cross.svg"
             class="modal__close-modal"
+            @click="closeAddModalFromWithin"
           />
         </div>
 
@@ -88,7 +89,11 @@
             </div>
           </div>
 
-          <button type="button" class="button button--secondary modal__button--secondary">
+          <button
+            type="button"
+            class="button button--secondary modal__button--secondary"
+            @click="closeAddModalFromWithin"
+          >
             Cancel
           </button>
 
@@ -125,7 +130,10 @@ export default {
       const user = this.buildUser(this.firstName, this.lastName, this.email);
       this.$props.dispatschAddUser(user);
     },
+    closeAddModalFromWithin() {
+      this.$props.closeAddModal();
+    },
   },
-  props: ['dispatschAddUser'],
+  props: ['dispatschAddUser', 'closeAddModal'],
 };
 </script>

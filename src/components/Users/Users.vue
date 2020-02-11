@@ -120,7 +120,10 @@
     </div>
 
     <div v-if="addModal === true">
-      <AddModal :dispatschAddUser="dispatschAddUser" />
+      <AddModal
+        :dispatschAddUser="dispatschAddUser"
+        :closeAddModal="closeAddModal"
+        />
     </div>
 
     <div v-if="editModal === true">
