@@ -123,9 +123,9 @@ export default {
     },
     addUser() {
       const user = this.buildUser(this.firstName, this.lastName, this.email);
-      this.$props.addNewUser(user);
+      this.$props.dispatschAddUser(user);
     },
   },
-  props: ['addNewUser'],
+  props: ['dispatschAddUser'],
 };
 </script>

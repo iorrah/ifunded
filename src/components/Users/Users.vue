@@ -118,8 +118,8 @@
     </div>
 
     <div v-if="modal === true">
+      <Modal :dispatschAddUser="dispatschAddUser" />
     </div>
-      <Modal :addNewUser="addNewUser" />
   </div>
 </template>
 
@@ -174,7 +174,7 @@ export default {
     getUsers() {
       this.$store.dispatch(ACTION_APP_GET_USERS);
     },
-    addUser(user) {
+    dispatschAddUser(user) {
       this.$store.dispatch(ACTION_APP_ADD_USER, user);
     },
     sortUsers(prop) {
@@ -206,9 +206,6 @@ export default {
     },
     openModal() {
       this.modal = true;
-    },
-    addNewUser(user) {
-      this.addUser(user);
     },
   },
   mounted() {

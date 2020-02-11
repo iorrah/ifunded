@@ -29,7 +29,10 @@ const mutations = {
   },
   // eslint-disable-next-line no-shadow
   [ADD_USER_VALUE]: (state, payload) => {
-    state.users.push(payload);
+    state.users.push({
+      ...payload,
+      created_date: new Date(payload.created_date),
+    });
   },
 };
 
@@ -40,7 +43,6 @@ const actions = {
     context.commit(GET_USERS_VALUE, data);
   },
   [ACTION_APP_ADD_USER]: async (context, payload) => {
-    // eslint-disable-next-line no-unused-vars
     try {
       const response = await Axios.post('https://reqres.in/api/users', payload);
 
