@@ -14,7 +14,7 @@ It was my intention to use Vuex to manipulate the global source of data given th
 
 See the Live Demo for this project [here](https://iorrah.github.io/ifunded).
 
-## Start by cloning the project
+## 1. Start by cloning the project
 
 Clone with SSH
 
@@ -22,7 +22,7 @@ Clone with SSH
 git clone git@github.com:iorrah/ifunded.git
 ```
 
-## Install the dependencies
+## 2. Install the dependencies
 
 Setup the project
 
@@ -30,7 +30,7 @@ Setup the project
 npm install
 ```
 
-### Start the local server
+### 3. Start the local server
 
 Compiles and hot-reloads for development
 
@@ -38,22 +38,24 @@ Compiles and hot-reloads for development
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 4. Further reference
+
+#### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Run your unit tests
+#### Run your unit tests
 ```
 npm run test:unit
 ```
 
-### Run your end-to-end tests
+#### Run your end-to-end tests
 ```
 npm run test:e2e
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 ```
 npm run lint
 ```
