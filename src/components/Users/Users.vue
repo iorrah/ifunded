@@ -131,6 +131,10 @@
       <div class="snackbar" v-if="showUserCreated === true">
         User created successfully
       </div>
+
+      <div class="snackbar" v-if="showUserEdited === true">
+        User edited successfully
+      </div>
     </div>
   </div>
 </template>
@@ -184,6 +188,7 @@ export default {
       editModal: false,
       user: null,
       showUserCreated: false,
+      showUserEdited: false,
     };
   },
   methods: {
@@ -196,6 +201,8 @@ export default {
     },
     dispatschEditUser(user) {
       this.$store.dispatch(ACTION_APP_EDIT_USER, user);
+      this.showUserEditedTmer();
+      this.editModal = false;
     },
     sortUsers(prop) {
       if (this.sort === 'asc') {
@@ -236,6 +243,13 @@ export default {
 
       setTimeout(() => {
         this.showUserCreated = false;
+      }, 2000);
+    },
+    showUserEditedTmer() {
+      this.showUserEdited = true;
+
+      setTimeout(() => {
+        this.showUserEdited = false;
       }, 2000);
     },
   },
