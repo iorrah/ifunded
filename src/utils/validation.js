@@ -1,4 +1,4 @@
-const isValidName = (name) => {
+const isValidString = (name) => {
   if (name.trim() === '') {
     return false;
   }
@@ -22,8 +22,64 @@ const isValidName = (name) => {
   return true;
 };
 
+const isValidName = (name) => {
+  if (isValidString(name) === false) {
+    return false;
+  }
+
+  if (name.indexOf('#') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('%') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('&') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('.') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf(';') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf(';') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('$') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('€') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('"') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('/') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('!') >= 0) {
+    return false;
+  }
+
+  if (name.indexOf('?') > 0) {
+    return false;
+  }
+
+  return true;
+};
+
 const isValidEmail = (email) => {
-  if (isValidName(email) === false) {
+  if (isValidString(email) === false) {
     return false;
   }
 
