@@ -17,7 +17,7 @@
       </h3>
 
       <div>
-        <button type="button" class="button button--primary" @click="openModal">
+        <button type="button" class="button button--primary" @click="openAddModal">
           Add User
         </button>
       </div>
@@ -117,8 +117,9 @@
       />
     </div>
 
-    <div v-if="modal === true">
-      <Modal :dispatschAddUser="dispatschAddUser" />
+    <div v-if="addModal === true">
+      <AddModal :dispatschAddUser="dispatschAddUser" />
+    </div>
     </div>
 
     <div class="snackbar__container">
@@ -131,7 +132,7 @@
 
 <script>
 import Filters from '../Filters/index';
-import Modal from '../Modal/index';
+import AddModal from '../AddModal/index';
 
 import {
   ACTION_APP_GET_USERS,
@@ -172,7 +173,7 @@ export default {
       search: '',
       creatorId: null,
       month: null,
-      modal: false,
+      addModal: false,
       user: null,
       showUserCreated: false,
     };
@@ -212,8 +213,9 @@ export default {
     formatDate(date) {
       return formatDate(date);
     },
-    openModal() {
-      this.modal = true;
+    openAddModal() {
+      this.addModal = true;
+    },
     },
     showUserCreatedTmer() {
       this.showUserCreated = true;
