@@ -198,12 +198,12 @@ export default {
     dispatschAddUser(user) {
       this.$store.dispatch(ACTION_APP_ADD_USER, user);
       this.showUserCreatedTmer();
-      this.addModal = false;
+      this.closeAddModal();
     },
     dispatschEditUser(user) {
       this.$store.dispatch(ACTION_APP_EDIT_USER, user);
       this.showUserEditedTmer();
-      this.editModal = false;
+      this.closeEditModal();
     },
     sortUsers(prop) {
       if (this.sort === 'asc') {
@@ -238,6 +238,13 @@ export default {
     openEditModal(user) {
       this.user = user;
       this.editModal = true;
+    },
+    closeAddModal() {
+      this.addModal = false;
+    },
+    closeEditModal() {
+      this.user = null;
+      this.editModal = false;
     },
     showUserCreatedTmer() {
       this.showUserCreated = true;
