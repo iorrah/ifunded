@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditModal renders correctly 1`] = `
+<div
+  class="modal__overlay"
+>
+  <div
+    class="modal__aligner"
+  >
+    <div
+      class="modal__card"
+    >
+      <div
+        class="modal__header"
+      >
+        <h2
+          class="modal__title"
+        >
+          Edit user
+        </h2>
+         
+        <img
+          class="modal__close-modal"
+          src="../../assets/cross.svg"
+        />
+      </div>
+       
+      <div
+        class="modal__body"
+      >
+        <div
+          class="material-form"
+        >
+          <div
+            class="material-form__input-text modal__input-text--first-name"
+          >
+            <div
+              class="group"
+            >
+              <input
+                class="inpField"
+                data-message="The format of your email is incorrect"
+                placeholder=""
+                required="required"
+                type="text"
+              />
+               
+              <span
+                class="highlight"
+              />
+               
+              <span
+                class="bar"
+              />
+               
+              <label>
+                
+                First name
+              
+              </label>
+               
+              <span
+                class="error-message"
+              >
+                
+                Error with Jane
+              
+              </span>
+            </div>
+          </div>
+           
+          <div
+            class="material-form__input-text modal__input-text--last-name"
+          >
+            <div
+              class="group"
+            >
+              <input
+                class="inpField"
+                data-message="The format of your email is incorrect"
+                placeholder=""
+                required="required"
+                type="text"
+              />
+               
+              <span
+                class="highlight"
+              />
+               
+              <span
+                class="bar"
+              />
+               
+              <label>
+                
+                Last name
+              
+              </label>
+               
+              <span
+                class="error-message"
+              >
+                
+                Error with Doe
+              
+              </span>
+            </div>
+          </div>
+        </div>
+         
+        <div
+          class="material-form modal__material-form--email"
+        >
+          <div
+            class="material-form__input-text modal__input-text--email"
+          >
+            <div
+              class="group"
+            >
+              <input
+                class="inpField"
+                data-message="The format of your email is incorrect"
+                placeholder=""
+                required="required"
+                type="text"
+              />
+               
+              <span
+                class="highlight"
+              />
+               
+              <span
+                class="bar"
+              />
+               
+              <label>
+                
+                Email
+              
+              </label>
+               
+              <span
+                class="error-message"
+              >
+                
+                Error with jane.doeemail.com
+              
+              </span>
+            </div>
+          </div>
+        </div>
+         
+        <!---->
+         
+        <button
+          class="button button--secondary modal__button--secondary"
+          type="button"
+        >
+          
+          Cancel
+        
+        </button>
+         
+        <button
+          class="button button--primary"
+          type="button"
+        >
+          
+          Save changes
+        
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
