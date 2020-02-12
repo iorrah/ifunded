@@ -33,7 +33,7 @@
                 </label>
 
                 <span class="error-message">
-                  Error
+                  Error with {{ firstName }}
                 </span>
               </div>
             </div>
@@ -57,7 +57,7 @@
                 </label>
 
                 <span class="error-message">
-                  Error
+                  Error with {{ lastName }}
                 </span>
               </div>
             </div>
@@ -83,7 +83,7 @@
                 </label>
 
                 <span class="error-message">
-                  Error
+                  Error with {{ email }}
                 </span>
               </div>
             </div>
