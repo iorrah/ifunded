@@ -129,6 +129,7 @@
 
 <script>
 import { months } from '../../utils/date-formatter';
+import { isValidNumber } from '../../utils/validation';
 
 export default {
   name: 'Filters',
@@ -136,14 +137,24 @@ export default {
   computed: {
     creators() {
       const creatorsIds = this.appUsers.map((e) => e.creator_id);
-      const uniqueIds = creatorsIds.filter((item, pos) => creatorsIds.indexOf(item) === pos);
-      return uniqueIds.map((id) => this.appUsers.find((e) => e.id === id));
+
+      // eslint-disable-next-line arrow-body-style
+      const uniqueIds = creatorsIds.filter((item, pos) => {
+        return creatorsIds.indexOf(item) === pos;
+      });
+
+      // eslint-disable-next-line arrow-body-style
+      const usersWhoCreated = uniqueIds.map((id) => {
+        return this.appUsers.find((e) => e.id === id);
+      });
+
+      return usersWhoCreated || [];
     },
     showCreatedBy() {
       return this.$props.creatorId === null;
     },
     showCreationDate() {
-      return Number.isNaN(parseInt(this.$props.month, 10)) || this.$props.month === 0;
+      return isValidNumber(this.$props.month) || this.$props.month === 0;
     },
     creatorName() {
       const creator = this.creators.find((e) => e.id === this.$props.creatorId);

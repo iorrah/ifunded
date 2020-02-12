@@ -98,4 +98,9 @@ const isValidEmail = (email) => {
   return true;
 };
 
-export { isValidName, isValidEmail };
+// eslint-disable-next-line arrow-body-style
+const isValidNumber = (number) => {
+  return Number.isNaN(parseInt(number, 10));
+};
+
+export { isValidName, isValidEmail, isValidNumber };
