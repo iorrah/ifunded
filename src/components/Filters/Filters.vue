@@ -129,7 +129,7 @@
 
 <script>
 import { months } from '../../utils/date-formatter';
-import { isValidNumber } from '../../utils/validation';
+import { isInvalidNumber } from '../../utils/validation';
 
 export default {
   name: 'Filters',
@@ -154,7 +154,7 @@ export default {
       return this.$props.creatorId === null;
     },
     showCreationDate() {
-      return isValidNumber(this.$props.month) || this.$props.month === 0;
+      return isInvalidNumber(this.$props.month) || this.$props.month === 0;
     },
     creatorName() {
       const creator = this.creators.find((e) => e.id === this.$props.creatorId);
