@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Context renders correctly 1`] = `
+<div
+  class="context container-fluid"
+>
+  <h1
+    class="context__title"
+  >
+    Platform users
+  </h1>
+   
+  <ul
+    class="context__menu"
+  >
+    <li
+      class="context__menu-item"
+    >
+      <a
+        class="context__menu-link"
+        href="#"
+      >
+        All users
+      </a>
+       
+      <i
+        class="context__menu-indicator--active"
+      />
+    </li>
+     
+    <li
+      class="context__menu-item"
+    >
+      <a
+        class="context__menu-link"
+        href="#"
+      >
+        Created by me
+      </a>
+    </li>
+     
+    <li
+      class="context__menu-item"
+    >
+      <a
+        class="context__menu-link"
+        href="#"
+      >
+        Deleted
+      </a>
+    </li>
+  </ul>
+</div>
+`;
