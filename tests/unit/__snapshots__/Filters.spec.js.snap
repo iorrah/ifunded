@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filters renders correctly 1`] = `
+<div
+  class="filters container"
+>
+  <p
+    class="filters__title"
+  >
+    <img
+      class="filters__icon"
+      src="../../assets/filter-icon.svg"
+    />
+    
+    Filter by
+  
+  </p>
+   
+  <div
+    class="filters__inputs"
+  >
+    <div
+      class="material-form"
+    >
+      <div
+        class="material-form__input-text filters__input-text"
+      >
+        <div
+          class="group"
+        >
+          <input
+            class="inpField"
+            data-message="The format of your email is incorrect"
+            placeholder=""
+            required="required"
+            type="text"
+          />
+           
+          <img
+            class="material-form__search-icon"
+            src="../../assets/search-icon.svg"
+          />
+           
+          <span
+            class="highlight"
+          />
+           
+          <span
+            class="bar"
+          />
+           
+          <label>
+            
+            Name or email
+          
+          </label>
+           
+          <span
+            class="error-message"
+          >
+            
+            Error
+          
+          </span>
+        </div>
+      </div>
+       
+      <div
+        class="material-form__input-select filters__input-select"
+      >
+        <div
+          class="group select-group"
+        >
+          <div
+            class="jq-selectbox jqselect inpField dropup opened"
+          >
+            <select
+              class="inpField inpField__select"
+              required="required"
+            >
+              <option
+                label="Everyone"
+                selected="selected"
+                value="0"
+              />
+               
+              <option
+                value="1"
+              >
+                
+                Jane Doe
+              
+              </option>
+            </select>
+             
+            <div
+              class="jq-selectbox__select"
+            >
+              <div
+                class="jq-selectbox__select-text placeholder"
+              >
+                <span>
+                  
+                  Jane Doe
+                
+                </span>
+              </div>
+               
+              <div
+                class="jq-selectbox__trigger"
+              >
+                <div
+                  class="jq-selectbox__trigger-arrow"
+                >
+                  <img
+                    class="jq-selectbox__select-arrow"
+                    src="../../assets/select-arrows.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+           
+          <span
+            class="highlight"
+          />
+           
+          <span
+            class="bar"
+          />
+        </div>
+      </div>
+       
+      <div
+        class="material-form__input-select filters__input-select"
+      >
+        <div
+          class="group select-group"
+        >
+          <div
+            class="jq-selectbox jqselect inpField dropup opened"
+          >
+            <select
+              class="inpField inpField__select"
+              required="required"
+            >
+              <option
+                selected="selected"
+                value="0"
+              >
+                Anytime
+              </option>
+               
+              <option
+                value="1"
+              >
+                January 2019
+              </option>
+              <option
+                value="2"
+              >
+                February 2019
+              </option>
+              <option
+                value="3"
+              >
+                March 2019
+              </option>
+              <option
+                value="4"
+              >
+                April 2019
+              </option>
+              <option
+                value="5"
+              >
+                May 2019
+              </option>
+              <option
+                value="6"
+              >
+                June 2019
+              </option>
+              <option
+                value="7"
+              >
+                July 2019
+              </option>
+              <option
+                value="8"
+              >
+                August 2019
+              </option>
+              <option
+                value="9"
+              >
+                September 2019
+              </option>
+              <option
+                value="10"
+              >
+                October 2019
+              </option>
+              <option
+                value="11"
+              >
+                November 2019
+              </option>
+              <option
+                value="12"
+              >
+                December 2019
+              </option>
+            </select>
+             
+            <div
+              class="jq-selectbox__select"
+            >
+              <div
+                class="jq-selectbox__select-text placeholder"
+              >
+                <span>
+                  
+                  February 2019
+                
+                </span>
+              </div>
+               
+              <div
+                class="jq-selectbox__trigger"
+              >
+                <div
+                  class="jq-selectbox__trigger-arrow"
+                >
+                  <img
+                    class="jq-selectbox__select-arrow"
+                    src="../../assets/select-arrows.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+           
+          <span
+            class="highlight"
+          />
+           
+          <span
+            class="bar"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
