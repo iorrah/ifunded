@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<nav
+  class="navbar container-fluid"
+>
+  <div
+    class="flex__space-between"
+  >
+    <div
+      class="navbar__left"
+    >
+      <a
+        class="navbar__link"
+        href="#"
+      >
+        <img
+          class="navbar__logo"
+          src="../../assets/ifunded-logo.svg"
+        />
+      </a>
+       
+      <ul
+        class="navbar__menu"
+      >
+        <li
+          class="navbar__menu-item"
+        >
+          <a
+            class="navbar__menu-link"
+            href="#"
+          >
+            Dashboard
+          </a>
+        </li>
+         
+        <li
+          class="navbar__menu-item"
+        >
+          <a
+            class="navbar__menu-link"
+            href="#"
+          >
+            Customers
+          </a>
+        </li>
+         
+        <li
+          class="navbar__menu-item"
+        >
+          <a
+            class="navbar__menu-link"
+            href="#"
+          >
+            Developers
+          </a>
+        </li>
+         
+        <li
+          class="navbar__menu-item"
+        >
+          <a
+            class="navbar__menu-link"
+            href="#"
+          >
+            Projects
+          </a>
+        </li>
+         
+        <li
+          class="navbar__menu-item"
+        >
+          <a
+            class="navbar__menu-link navbar__menu-link--active"
+            href="#"
+          >
+            
+            Users
+            
+            <i
+              class="navbar__menu-indicator--active"
+            />
+          </a>
+        </li>
+         
+        <li
+          class="navbar__menu-item"
+        >
+          <a
+            class="navbar__menu-link"
+            href="#"
+          >
+            Affiliates
+          </a>
+        </li>
+      </ul>
+    </div>
+     
+    <div
+      class="navbar__right"
+    >
+      <div
+        class="navbar__form"
+      >
+        <div
+          class="material-form"
+        >
+          <div
+            class="material-form__input-text"
+          >
+            <div
+              class="group"
+            >
+              <input
+                class="inpField"
+                data-message="The format of your email is incorrect"
+                placeholder=""
+                required="required"
+                type="text"
+                value=""
+              />
+               
+              <img
+                class="material-form__search-icon"
+                src="../../assets/search-icon.svg"
+              />
+               
+              <span
+                class="highlight"
+              />
+               
+              <span
+                class="bar"
+              />
+               
+              <label>
+                
+                Search
+              
+              </label>
+               
+              <span
+                class="error-message"
+              >
+                
+                Error
+              
+              </span>
+            </div>
+          </div>
+           
+          <div
+            class="material-form__input-select"
+          >
+            <div
+              class="group select-group"
+            >
+              <div
+                class="jq-selectbox jqselect inpField dropup opened"
+              >
+                <select
+                  class="inpField inpField__select"
+                  required="required"
+                >
+                  <option
+                    label="English"
+                    selected="selected"
+                  />
+                   
+                  <option
+                    label="German"
+                  />
+                </select>
+                 
+                <div
+                  class="jq-selectbox__select"
+                >
+                  <div
+                    class="jq-selectbox__select-text placeholder"
+                  >
+                    
+                    Language
+                  
+                  </div>
+                   
+                  <div
+                    class="jq-selectbox__trigger"
+                  >
+                    <div
+                      class="jq-selectbox__trigger-arrow"
+                    >
+                      <img
+                        class="jq-selectbox__select-arrow"
+                        src="../../assets/select-arrows.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+              <span
+                class="highlight"
+              />
+               
+              <span
+                class="bar"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <a
+        class="navbar__profile"
+        href="#"
+      >
+        <span
+          class="navbar__salutation"
+        >
+          Janet Weaver
+        </span>
+         
+        <img
+          class="navbar__avatar"
+          src="../../assets/user-avatar.png"
+        />
+      </a>
+    </div>
+  </div>
+</nav>
+`;
