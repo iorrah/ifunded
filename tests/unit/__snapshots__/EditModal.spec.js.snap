@@ -143,7 +143,7 @@ exports[`EditModal renders correctly 1`] = `
                 class="error-message"
               >
                 
-                Error with jane.doeemail.com
+                Error with jane.doe@email.com
               
               </span>
             </div>

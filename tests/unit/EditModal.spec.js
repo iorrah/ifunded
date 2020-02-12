@@ -9,7 +9,7 @@ const props = {
       id: 1,
       first_name: 'Jane',
       last_name: 'Doe',
-      email: 'jane.doeemail.com',
+      email: 'jane.doe@email.com',
       created_date: new Date('2019-02-12'), // Feb
       creator_id: 1,
     },
