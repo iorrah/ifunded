@@ -1,5 +1,5 @@
 const isValidString = (name) => {
-  if (name.trim() === '') {
+  if (`${name}`.trim() === '') {
     return false;
   }
 
@@ -75,6 +75,14 @@ const isValidName = (name) => {
     return false;
   }
 
+  if (name.indexOf('_') > 0) {
+    return false;
+  }
+
+  if (name.indexOf('-') > 0) {
+    return false;
+  }
+
   return true;
 };
 
@@ -92,6 +100,22 @@ const isValidEmail = (email) => {
   }
 
   if (email.indexOf('@') === (email.length - 1)) {
+    return false;
+  }
+
+  if ((email.match(/@/g) || []).length !== 1) {
+    return false;
+  }
+
+  if (email.indexOf('.') === -1) {
+    return false;
+  }
+
+  if (email.indexOf('.') === 0) {
+    return false;
+  }
+
+  if (email.indexOf('.') === (email.length - 1)) {
     return false;
   }
 
