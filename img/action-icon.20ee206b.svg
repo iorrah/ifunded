@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3px" height="15px" viewBox="0 0 3 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>ui Action Icons</title>
+    <desc>Created with Sketch.</desc>
+    <g id="02-Workspace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-01" transform="translate(-1222.000000, -374.000000)" fill="#62697F">
+            <g id="ui-Table" transform="translate(120.000000, 324.000000)">
+                <g id="ui-Line" transform="translate(0.000000, 38.000000)">
+                    <path d="M1103.5,24 C1104.32843,24 1105,24.6715729 1105,25.5 C1105,26.3284271 1104.32843,27 1103.5,27 C1102.67157,27 1102,26.3284271 1102,25.5 C1102,24.6715729 1102.67157,24 1103.5,24 Z M1103.5,18 C1104.32843,18 1105,18.6715729 1105,19.5 C1105,20.3284271 1104.32843,21 1103.5,21 C1102.67157,21 1102,20.3284271 1102,19.5 C1102,18.6715729 1102.67157,18 1103.5,18 Z M1103.5,12 C1104.32843,12 1105,12.6715729 1105,13.5 C1105,14.3284271 1104.32843,15 1103.5,15 C1102.67157,15 1102,14.3284271 1102,13.5 C1102,12.6715729 1102.67157,12 1103.5,12 Z" id="ui-Action-Icons"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
