@@ -37,5 +37,9 @@ const parse = (users) => {
   });
 };
 
-// eslint-disable-next-line
-export { parse };
+export {
+  getRandomBetween,
+  getRandomDate,
+  getRandomUserId,
+  parse,
+};
