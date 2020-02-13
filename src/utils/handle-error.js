@@ -8,17 +8,34 @@ const serverError = {
   body: 'the REST API could not complete the transaction',
 };
 
-const handleInternalError = (error) => {
-  const string = `${internalError.header} (${error}): ${internalError.body}`;
-  // eslint-disable-next-line no-console
-  console.error(string);
+// eslint-disable-next-line arrow-body-style
+const constructError = (structure, error) => {
+  return `${structure.header} (${error}): ${structure.body}`;
+};
+
+const handleInternalError = (error, fn) => {
+  const string = constructError(internalError, error);
+
+  if (fn && typeof fn === 'function') {
+    fn(string);
+  } else {
+    // eslint-disable-next-line no-console
+    console.error(string);
+  }
+
   return string;
 };
 
-const handleServerError = (error) => {
-  const string = `${serverError.header} ${error}: ${serverError.body}`;
-  // eslint-disable-next-line no-console
-  console.error(string);
+const handleServerError = (error, fn) => {
+  const string = constructError(serverError, error);
+
+  if (fn && typeof fn === 'function') {
+    fn(string);
+  } else {
+    // eslint-disable-next-line no-console
+    console.error(string);
+  }
+
   return string;
 };
 
