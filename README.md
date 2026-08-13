@@ -1,4 +1,6 @@
-# [iFunded - Code Challenge](https://iorrah.github.io/ifunded)
+# iFunded
+
+Live Demo [here](https://iorrah.github.io/ifunded)
 
 ![Project Cover](src/assets/preview.png)
 
